@@ -1,0 +1,5 @@
+[2025-01-29T17:25:11.538+0000] {processor.py:186} INFO - Started process (PID=184) to work on /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-01-29T17:25:11.542+0000] {processor.py:914} INFO - Processing file /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-01-29T17:25:11.550+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:11.549+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-01-29T17:25:11.558+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-01-29T17:25:11.593+0000] {processor.py:208} INFO - Processing /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.068 seconds

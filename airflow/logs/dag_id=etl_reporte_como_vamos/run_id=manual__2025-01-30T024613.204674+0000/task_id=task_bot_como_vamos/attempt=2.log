@@ -1,0 +1,214 @@
+[2025-01-30T02:56:42.482+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T02:56:42.532+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T02:46:13.204674+00:00 [queued]>
+[2025-01-30T02:56:42.556+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T02:46:13.204674+00:00 [queued]>
+[2025-01-30T02:56:42.558+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-30T02:56:42.592+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-30 02:46:13.204674+00:00
+[2025-01-30T02:56:42.605+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1889) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T02:56:42.610+0000] {standard_task_runner.py:72} INFO - Started process 1890 to run task
+[2025-01-30T02:56:42.610+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-30T02:46:13.204674+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpqxn9wmmt']
+[2025-01-30T02:56:42.613+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask task_bot_como_vamos
+[2025-01-30T02:56:42.720+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T02:46:13.204674+00:00 [running]> on host 438c87da0b60
+[2025-01-30T02:56:42.914+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T02:46:13.204674+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T02:46:13.204674+00:00'
+[2025-01-30T02:56:42.917+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T02:56:42.956+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T02:56:42.959+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-30T02:56:42.977+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T02:56:46.671+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '30/01/2025'
+[2025-01-30T02:56:46.672+0000] {subprocess.py:106} INFO - 2025-01-30 02:56:46,671 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-30T02:56:47.611+0000] {subprocess.py:106} INFO - 2025-01-30 02:56:47,610 - bot_como_vamos - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-01-30T02:57:19.603+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="57aa0b4f7964c540f891a5b7c7e33a5b", element="f.E98D4E98B53007E223DA9EEA9FB0458D.d.60F98B519CE1D92FBEF49E72F4CD9053.e.75")>
+[2025-01-30T02:57:19.606+0000] {subprocess.py:106} INFO - 2025-01-30 02:57:19,602 - bot_como_vamos - INFO - Loging success
+[2025-01-30T02:57:29.760+0000] {subprocess.py:106} INFO - 2025-01-30 02:57:29,760 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-01-30T02:57:40.017+0000] {subprocess.py:106} INFO - 2025-01-30 02:57:40,017 - bot_como_vamos - INFO - Input dates successfully
+[2025-01-30T02:57:51.052+0000] {subprocess.py:106} INFO - 2025-01-30 02:57:51,051 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-01-30T03:01:01.123+0000] {subprocess.py:106} INFO - 2025-01-30 03:01:01,120 - bot_como_vamos - ERROR - Execution error bot_reporte_como_vamos.py:
+[2025-01-30T03:01:01.131+0000] {subprocess.py:106} INFO -  Error type: WebDriverException
+[2025-01-30T03:01:01.134+0000] {subprocess.py:106} INFO - Error message: Message: Unable to execute request for an existing session: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.137+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-30T03:01:01.144+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-01-30T03:01:01.147+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-30T03:01:01.149+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T03:01:01.152+0000] {subprocess.py:106} INFO - java.lang.RuntimeException: Unable to execute request for an existing session: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.157+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-30T03:01:01.159+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-01-30T03:01:01.161+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-30T03:01:01.164+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.execute(HandleSession.java:210)
+[2025-01-30T03:01:01.166+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:397)
+[2025-01-30T03:01:01.168+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.170+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-30T03:01:01.177+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.179+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.Router.execute(Router.java:89)
+[2025-01-30T03:01:01.181+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders.lambda$apply$0(EnsureSpecCompliantResponseHeaders.java:34)
+[2025-01-30T03:01:01.183+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.185+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-30T03:01:01.187+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.194+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.AddWebDriverSpecHeaders.lambda$apply$0(AddWebDriverSpecHeaders.java:35)
+[2025-01-30T03:01:01.199+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-30T03:01:01.201+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.203+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-30T03:01:01.205+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.207+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.netty.server.SeleniumHandler.lambda$channelRead0$0(SeleniumHandler.java:49)
+[2025-01-30T03:01:01.211+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-30T03:01:01.214+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-30T03:01:01.217+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-30T03:01:01.219+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-30T03:01:01.226+0000] {subprocess.py:106} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-30T03:01:01.227+0000] {subprocess.py:106} INFO - Caused by: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.229+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+[2025-01-30T03:01:01.231+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-30T03:01:01.234+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-30T03:01:01.243+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+[2025-01-30T03:01:01.245+0000] {subprocess.py:106} INFO - 	... 3 more
+[2025-01-30T03:01:01.247+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:01:01.249+0000] {subprocess.py:106} INFO - Full Traceback: Traceback (most recent call last):
+[2025-01-30T03:01:01.253+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 137, in main
+[2025-01-30T03:01:01.259+0000] {subprocess.py:106} INFO -     reporte_como_vamos.click()
+[2025-01-30T03:01:01.262+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 119, in click
+[2025-01-30T03:01:01.264+0000] {subprocess.py:106} INFO -     self._execute(Command.CLICK_ELEMENT)
+[2025-01-30T03:01:01.267+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 570, in _execute
+[2025-01-30T03:01:01.268+0000] {subprocess.py:106} INFO -     return self._parent.execute(command, params)
+[2025-01-30T03:01:01.270+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T03:01:01.273+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-30T03:01:01.276+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-30T03:01:01.278+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-30T03:01:01.280+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-30T03:01:01.282+0000] {subprocess.py:106} INFO - selenium.common.exceptions.WebDriverException: Message: Unable to execute request for an existing session: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.285+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-30T03:01:01.287+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-01-30T03:01:01.290+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-30T03:01:01.293+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T03:01:01.295+0000] {subprocess.py:106} INFO - java.lang.RuntimeException: Unable to execute request for an existing session: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.297+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-30T03:01:01.298+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-01-30T03:01:01.300+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-30T03:01:01.302+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.execute(HandleSession.java:210)
+[2025-01-30T03:01:01.303+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:397)
+[2025-01-30T03:01:01.305+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.307+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-30T03:01:01.308+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.309+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.Router.execute(Router.java:89)
+[2025-01-30T03:01:01.311+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders.lambda$apply$0(EnsureSpecCompliantResponseHeaders.java:34)
+[2025-01-30T03:01:01.313+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.315+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-30T03:01:01.316+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-30T03:01:01.317+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.AddWebDriverSpecHeaders.lambda$apply$0(AddWebDriverSpecHeaders.java:35)
+[2025-01-30T03:01:01.318+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-30T03:01:01.320+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.321+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-30T03:01:01.323+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-30T03:01:01.325+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.netty.server.SeleniumHandler.lambda$channelRead0$0(SeleniumHandler.java:49)
+[2025-01-30T03:01:01.326+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-30T03:01:01.328+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-30T03:01:01.331+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-30T03:01:01.333+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-30T03:01:01.334+0000] {subprocess.py:106} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-30T03:01:01.335+0000] {subprocess.py:106} INFO - Caused by: java.util.concurrent.TimeoutException
+[2025-01-30T03:01:01.337+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+[2025-01-30T03:01:01.339+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-30T03:01:01.340+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-30T03:01:01.342+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+[2025-01-30T03:01:01.344+0000] {subprocess.py:106} INFO - 	... 3 more
+[2025-01-30T03:01:01.345+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:01:01.348+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:01:01.349+0000] {subprocess.py:106} INFO - 2025-01-30 03:01:01,151 - bot_como_vamos - INFO - Waiting for download file...............
+[2025-01-30T03:01:01.351+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:01.353+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:01.354+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:06.311+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:06.317+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:06.323+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:11.330+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:11.335+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:11.339+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:16.343+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:16.347+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:16.350+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:21.354+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:21.358+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:21.363+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:26.366+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:26.368+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:26.372+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:31.375+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:31.380+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:31.386+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:36.420+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:36.451+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:36.479+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:41.487+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:41.494+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:41.503+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:46.508+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:46.513+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:46.517+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:51.523+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:51.527+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:51.531+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:01:56.538+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:01:56.542+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:01:56.547+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:01.551+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:01.555+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:01.559+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:06.566+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:06.571+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:06.575+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:11.578+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:11.581+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:11.585+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:16.590+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:16.594+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:16.598+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:21.604+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:21.608+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:21.611+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:26.616+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:26.619+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:26.623+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:31.628+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:31.633+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:31.638+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:36.645+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:36.651+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:36.656+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:41.661+0000] {subprocess.py:106} INFO - ic| file: '***tmp79thixtw'
+[2025-01-30T03:02:41.665+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:02:41.669+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:02:45.687+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-30T03:02:45.689+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T03:02:45.693+0000] {process_utils.py:132} INFO - Sending 15 to group 1890. PIDs of all processes in the group: [1892, 1890]
+[2025-01-30T03:02:45.694+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1890
+[2025-01-30T03:02:45.695+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-30T03:02:45.697+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-01-30T03:02:45.728+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-30T03:02:45.738+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-30T02:46:13.204674+00:00, execution_date=20250130T024613, start_date=20250130T025642, end_date=20250130T030245
+[2025-01-30T03:02:45.774+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T03:02:45.829+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1892, status='terminated', started='02:56:42') (1892) terminated with exit code None
+[2025-01-30T03:02:45.830+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1890, status='terminated', exitcode=2, started='02:56:41') (1890) terminated with exit code 2

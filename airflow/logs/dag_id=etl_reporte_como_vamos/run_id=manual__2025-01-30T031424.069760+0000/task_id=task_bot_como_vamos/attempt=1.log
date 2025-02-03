@@ -1,0 +1,151 @@
+[2025-01-30T03:14:26.334+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T03:14:26.374+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T03:14:24.069760+00:00 [queued]>
+[2025-01-30T03:14:26.393+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T03:14:24.069760+00:00 [queued]>
+[2025-01-30T03:14:26.394+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-30T03:14:26.425+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-30 03:14:24.069760+00:00
+[2025-01-30T03:14:26.435+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2116) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T03:14:26.438+0000] {standard_task_runner.py:72} INFO - Started process 2117 to run task
+[2025-01-30T03:14:26.438+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-30T03:14:24.069760+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpu23a179c']
+[2025-01-30T03:14:26.442+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask task_bot_como_vamos
+[2025-01-30T03:14:26.538+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T03:14:24.069760+00:00 [running]> on host 438c87da0b60
+[2025-01-30T03:14:26.702+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T03:14:24.069760+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T03:14:24.069760+00:00'
+[2025-01-30T03:14:26.704+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T03:14:26.736+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T03:14:26.739+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-30T03:14:26.761+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T03:14:31.239+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '30/01/2025'
+[2025-01-30T03:14:31.241+0000] {subprocess.py:106} INFO - 2025-01-30 03:14:31,239 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-30T03:14:32.081+0000] {subprocess.py:106} INFO - 2025-01-30 03:14:32,080 - bot_como_vamos - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-01-30T03:15:25.251+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="d120ffec7c2f0412341071b9c9cb62de", element="f.2A6B25B8E2655C3F04A2795F88D147CD.d.E3850664D6E9C5D8F0E3699476E95427.e.76")>
+[2025-01-30T03:15:25.252+0000] {subprocess.py:106} INFO - 2025-01-30 03:15:25,251 - bot_como_vamos - INFO - Loging success
+[2025-01-30T03:15:35.393+0000] {subprocess.py:106} INFO - 2025-01-30 03:15:35,393 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-01-30T03:15:45.572+0000] {subprocess.py:106} INFO - 2025-01-30 03:15:45,572 - bot_como_vamos - INFO - Input dates successfully
+[2025-01-30T03:15:55.796+0000] {subprocess.py:106} INFO - 2025-01-30 03:15:55,796 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-01-30T03:16:05.849+0000] {subprocess.py:106} INFO - 2025-01-30 03:16:05,848 - bot_como_vamos - ERROR - Execution error bot_reporte_como_vamos.py:
+[2025-01-30T03:16:05.849+0000] {subprocess.py:106} INFO -  Error type: ElementNotInteractableException
+[2025-01-30T03:16:05.850+0000] {subprocess.py:106} INFO - Error message: Message: element not interactable
+[2025-01-30T03:16:05.851+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-30T03:16:05.852+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T03:16:05.853+0000] {subprocess.py:106} INFO - #0 0x557c08171dca <unknown>
+[2025-01-30T03:16:05.854+0000] {subprocess.py:106} INFO - #1 0x557c07c6824d <unknown>
+[2025-01-30T03:16:05.855+0000] {subprocess.py:106} INFO - #2 0x557c07cb92d9 <unknown>
+[2025-01-30T03:16:05.857+0000] {subprocess.py:106} INFO - #3 0x557c07cac2bd <unknown>
+[2025-01-30T03:16:05.858+0000] {subprocess.py:106} INFO - #4 0x557c07cdca92 <unknown>
+[2025-01-30T03:16:05.859+0000] {subprocess.py:106} INFO - #5 0x557c07cabc48 <unknown>
+[2025-01-30T03:16:05.860+0000] {subprocess.py:106} INFO - #6 0x557c07cdcc5e <unknown>
+[2025-01-30T03:16:05.860+0000] {subprocess.py:106} INFO - #7 0x557c07cfb4b3 <unknown>
+[2025-01-30T03:16:05.861+0000] {subprocess.py:106} INFO - #8 0x557c07cdc833 <unknown>
+[2025-01-30T03:16:05.862+0000] {subprocess.py:106} INFO - #9 0x557c07ca95a0 <unknown>
+[2025-01-30T03:16:05.863+0000] {subprocess.py:106} INFO - #10 0x557c07caaece <unknown>
+[2025-01-30T03:16:05.864+0000] {subprocess.py:106} INFO - #11 0x557c0813bbdb <unknown>
+[2025-01-30T03:16:05.865+0000] {subprocess.py:106} INFO - #12 0x557c0813fb67 <unknown>
+[2025-01-30T03:16:05.865+0000] {subprocess.py:106} INFO - #13 0x557c081273bc <unknown>
+[2025-01-30T03:16:05.866+0000] {subprocess.py:106} INFO - #14 0x557c08140727 <unknown>
+[2025-01-30T03:16:05.867+0000] {subprocess.py:106} INFO - #15 0x557c0810b74f <unknown>
+[2025-01-30T03:16:05.868+0000] {subprocess.py:106} INFO - #16 0x557c08160938 <unknown>
+[2025-01-30T03:16:05.869+0000] {subprocess.py:106} INFO - #17 0x557c08160b00 <unknown>
+[2025-01-30T03:16:05.869+0000] {subprocess.py:106} INFO - #18 0x557c08170c46 <unknown>
+[2025-01-30T03:16:05.870+0000] {subprocess.py:106} INFO - #19 0x7f76b8d72a94 <unknown>
+[2025-01-30T03:16:05.871+0000] {subprocess.py:106} INFO - #20 0x7f76b8dffc3c <unknown>
+[2025-01-30T03:16:05.871+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:16:05.872+0000] {subprocess.py:106} INFO - Full Traceback: Traceback (most recent call last):
+[2025-01-30T03:16:05.873+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 137, in main
+[2025-01-30T03:16:05.873+0000] {subprocess.py:106} INFO -     reporte_como_vamos.click()
+[2025-01-30T03:16:05.874+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 119, in click
+[2025-01-30T03:16:05.875+0000] {subprocess.py:106} INFO -     self._execute(Command.CLICK_ELEMENT)
+[2025-01-30T03:16:05.875+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 570, in _execute
+[2025-01-30T03:16:05.876+0000] {subprocess.py:106} INFO -     return self._parent.execute(command, params)
+[2025-01-30T03:16:05.877+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T03:16:05.878+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-30T03:16:05.878+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-30T03:16:05.879+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-30T03:16:05.880+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-30T03:16:05.881+0000] {subprocess.py:106} INFO - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+[2025-01-30T03:16:05.881+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-30T03:16:05.882+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T03:16:05.883+0000] {subprocess.py:106} INFO - #0 0x557c08171dca <unknown>
+[2025-01-30T03:16:05.884+0000] {subprocess.py:106} INFO - #1 0x557c07c6824d <unknown>
+[2025-01-30T03:16:05.885+0000] {subprocess.py:106} INFO - #2 0x557c07cb92d9 <unknown>
+[2025-01-30T03:16:05.885+0000] {subprocess.py:106} INFO - #3 0x557c07cac2bd <unknown>
+[2025-01-30T03:16:05.886+0000] {subprocess.py:106} INFO - #4 0x557c07cdca92 <unknown>
+[2025-01-30T03:16:05.887+0000] {subprocess.py:106} INFO - #5 0x557c07cabc48 <unknown>
+[2025-01-30T03:16:05.888+0000] {subprocess.py:106} INFO - #6 0x557c07cdcc5e <unknown>
+[2025-01-30T03:16:05.888+0000] {subprocess.py:106} INFO - #7 0x557c07cfb4b3 <unknown>
+[2025-01-30T03:16:05.889+0000] {subprocess.py:106} INFO - #8 0x557c07cdc833 <unknown>
+[2025-01-30T03:16:05.890+0000] {subprocess.py:106} INFO - #9 0x557c07ca95a0 <unknown>
+[2025-01-30T03:16:05.891+0000] {subprocess.py:106} INFO - #10 0x557c07caaece <unknown>
+[2025-01-30T03:16:05.891+0000] {subprocess.py:106} INFO - #11 0x557c0813bbdb <unknown>
+[2025-01-30T03:16:05.892+0000] {subprocess.py:106} INFO - #12 0x557c0813fb67 <unknown>
+[2025-01-30T03:16:05.893+0000] {subprocess.py:106} INFO - #13 0x557c081273bc <unknown>
+[2025-01-30T03:16:05.893+0000] {subprocess.py:106} INFO - #14 0x557c08140727 <unknown>
+[2025-01-30T03:16:05.894+0000] {subprocess.py:106} INFO - #15 0x557c0810b74f <unknown>
+[2025-01-30T03:16:05.895+0000] {subprocess.py:106} INFO - #16 0x557c08160938 <unknown>
+[2025-01-30T03:16:05.896+0000] {subprocess.py:106} INFO - #17 0x557c08160b00 <unknown>
+[2025-01-30T03:16:05.896+0000] {subprocess.py:106} INFO - #18 0x557c08170c46 <unknown>
+[2025-01-30T03:16:05.897+0000] {subprocess.py:106} INFO - #19 0x7f76b8d72a94 <unknown>
+[2025-01-30T03:16:05.897+0000] {subprocess.py:106} INFO - #20 0x7f76b8dffc3c <unknown>
+[2025-01-30T03:16:05.898+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:16:05.898+0000] {subprocess.py:106} INFO - 
+[2025-01-30T03:16:05.899+0000] {subprocess.py:106} INFO - 2025-01-30 03:16:05,853 - bot_como_vamos - INFO - Waiting for download file...............
+[2025-01-30T03:16:05.900+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:05.901+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:05.901+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:10.901+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:10.906+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:10.910+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:15.915+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:15.917+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:15.919+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:20.923+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:20.926+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:20.929+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:25.933+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:25.936+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:25.938+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:30.941+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:30.947+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:30.953+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:35.959+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:35.965+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:35.970+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:40.977+0000] {subprocess.py:106} INFO - ic| file: '***tmpqt_kop57'
+[2025-01-30T03:16:40.983+0000] {subprocess.py:106} INFO - ic| file: 'pymp-mlstl44u'
+[2025-01-30T03:16:40.989+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-30T03:16:42.498+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-30T03:16:42.499+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T03:16:42.502+0000] {process_utils.py:132} INFO - Sending 15 to group 2117. PIDs of all processes in the group: [2119, 2117]
+[2025-01-30T03:16:42.503+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2117
+[2025-01-30T03:16:42.504+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-30T03:16:42.505+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-01-30T03:16:42.524+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-30T03:16:42.532+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-30T03:14:24.069760+00:00, execution_date=20250130T031424, start_date=20250130T031426, end_date=20250130T031642
+[2025-01-30T03:16:42.554+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T03:16:42.597+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2119, status='terminated', started='03:14:26') (2119) terminated with exit code None
+[2025-01-30T03:16:42.598+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2117, status='terminated', exitcode=2, started='03:14:25') (2117) terminated with exit code 2

@@ -1,0 +1,33 @@
+[2025-01-29T17:24:50.853+0000] {processor.py:186} INFO - Started process (PID=157) to work on /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_datetime_operator.py
+[2025-01-29T17:24:50.857+0000] {processor.py:914} INFO - Processing file /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_datetime_operator.py for tasks to queue
+[2025-01-29T17:24:50.867+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:50.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_datetime_operator.py
+[2025-01-29T17:24:50.903+0000] {processor.py:925} INFO - DAG(s) 'example_branch_datetime_operator', 'example_branch_datetime_operator_2', 'example_branch_datetime_operator_3' retrieved from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_datetime_operator.py
+[2025-01-29T17:24:51.543+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.541+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:example_branch_datetime_operator
+[2025-01-29T17:24:51.570+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.569+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:example_branch_datetime_operator
+[2025-01-29T17:24:51.588+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.587+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:example_branch_datetime_operator
+[2025-01-29T17:24:51.608+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.607+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:example_branch_datetime_operator
+[2025-01-29T17:24:51.626+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.625+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:example_branch_datetime_operator
+[2025-01-29T17:24:51.646+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.645+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:example_branch_datetime_operator
+[2025-01-29T17:24:51.678+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.677+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:example_branch_datetime_operator
+[2025-01-29T17:24:51.726+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.725+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.751+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.750+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.780+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.779+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.803+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.802+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.826+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.825+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.845+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.844+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.869+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.867+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:example_branch_datetime_operator_2
+[2025-01-29T17:24:51.933+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.932+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:example_branch_datetime_operator_3
+[2025-01-29T17:24:51.960+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.960+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:example_branch_datetime_operator_3
+[2025-01-29T17:24:51.985+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:51.984+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:example_branch_datetime_operator_3
+[2025-01-29T17:24:52.009+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.008+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:example_branch_datetime_operator_3
+[2025-01-29T17:24:52.031+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.030+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:example_branch_datetime_operator_3
+[2025-01-29T17:24:52.051+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.050+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:example_branch_datetime_operator_3
+[2025-01-29T17:24:52.073+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.072+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:example_branch_datetime_operator_3
+[2025-01-29T17:24:52.076+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.076+0000] {dag.py:3239} INFO - Sync 3 DAGs
+[2025-01-29T17:24:52.225+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.225+0000] {dag.py:3262} INFO - Creating ORM DAG for example_branch_datetime_operator
+[2025-01-29T17:24:52.229+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.229+0000] {dag.py:3262} INFO - Creating ORM DAG for example_branch_datetime_operator_2
+[2025-01-29T17:24:52.232+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.232+0000] {dag.py:3262} INFO - Creating ORM DAG for example_branch_datetime_operator_3
+[2025-01-29T17:24:52.304+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.303+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_datetime_operator to 2025-01-28 00:00:00+00:00, run_after=2025-01-29 00:00:00+00:00
+[2025-01-29T17:24:52.313+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.313+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_datetime_operator_2 to 2025-01-28 00:00:00+00:00, run_after=2025-01-29 00:00:00+00:00
+[2025-01-29T17:24:52.320+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:24:52.319+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_datetime_operator_3 to 2025-01-28 00:00:00+00:00, run_after=2025-01-29 00:00:00+00:00
+[2025-01-29T17:24:52.435+0000] {processor.py:208} INFO - Processing /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_branch_datetime_operator.py took 1.603 seconds

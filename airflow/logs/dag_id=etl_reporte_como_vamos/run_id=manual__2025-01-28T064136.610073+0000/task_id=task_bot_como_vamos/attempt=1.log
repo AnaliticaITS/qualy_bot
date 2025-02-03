@@ -1,0 +1,111 @@
+[2025-01-28T06:41:40.065+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T06:41:40.139+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [queued]>
+[2025-01-28T06:41:40.176+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [queued]>
+[2025-01-28T06:41:40.178+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-28T06:41:40.246+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-28 06:41:36.610073+00:00
+[2025-01-28T06:41:40.273+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-28T06:41:36.610073+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpg7wzywq2']
+[2025-01-28T06:41:40.287+0000] {standard_task_runner.py:105} INFO - Job 51: Subtask task_bot_como_vamos
+[2025-01-28T06:41:40.300+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=247) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T06:41:40.303+0000] {standard_task_runner.py:72} INFO - Started process 251 to run task
+[2025-01-28T06:41:40.525+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [running]> on host 08150d224bd2
+[2025-01-28T06:41:41.733+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T06:41:36.610073+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T06:41:36.610073+00:00'
+[2025-01-28T06:41:41.737+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T06:41:41.789+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T06:41:41.792+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-28T06:41:41.813+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T06:41:45.884+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '28/01/2025'
+[2025-01-28T06:41:45.886+0000] {subprocess.py:106} INFO - 2025-01-28 06:41:45,884 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-28T06:41:47.620+0000] {subprocess.py:106} INFO - 2025-01-28 06:41:47,617 - root - ERROR - Execution error: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 404. Message: invalid session id: session deleted as the browser has closed the connection
+[2025-01-28T06:41:47.626+0000] {subprocess.py:106} INFO - from disconnected: Unable to receive message from renderer
+[2025-01-28T06:41:47.629+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-28T06:41:47.630+0000] {subprocess.py:106} INFO - Host info: host: '55c85d6c8bc2', ip: '172.18.0.5'
+[2025-01-28T06:41:47.631+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:41:47.632+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:41:47.634+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:41:47.635+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:41:47.637+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:41:47.640+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:41:47.642+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:41:47.644+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:41:47.646+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:41:47.647+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-28T06:41:47.648+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:167)
+[2025-01-28T06:41:47.651+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:678)
+[2025-01-28T06:41:47.653+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:597)
+[2025-01-28T06:41:47.655+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:861)
+[2025-01-28T06:41:47.657+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:818)
+[2025-01-28T06:41:47.659+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+[2025-01-28T06:41:47.661+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+[2025-01-28T06:41:47.662+0000] {subprocess.py:106} INFO -     at java.lang.Thread.run (Thread.java:840)
+[2025-01-28T06:41:47.697+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:41:47.699+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:41:47.701+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:41:52.700+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:41:52.702+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:41:52.704+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:41:57.703+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:41:57.705+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:41:57.707+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:02.706+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:02.708+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:02.710+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:07.709+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:07.710+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:07.712+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:12.711+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:12.713+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:12.714+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:17.713+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:17.715+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:17.717+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:22.716+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:22.719+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:22.720+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:27.718+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:27.719+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:27.721+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:32.719+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:32.722+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:32.723+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:37.722+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:37.724+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:37.725+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:42.724+0000] {subprocess.py:106} INFO - ic| file: '***tmp4vx5oeuj'
+[2025-01-28T06:42:42.726+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:42:42.727+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:42:45.867+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-28T06:42:45.869+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-28T06:42:45.871+0000] {process_utils.py:132} INFO - Sending 15 to group 251. PIDs of all processes in the group: [255, 251]
+[2025-01-28T06:42:45.872+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 251
+[2025-01-28T06:42:45.873+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-28T06:42:45.874+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-01-28T06:42:45.893+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-28T06:42:45.905+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-28T06:41:36.610073+00:00, execution_date=20250128T064136, start_date=20250128T064140, end_date=20250128T064245
+[2025-01-28T06:42:45.924+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T06:42:45.970+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=255, status='terminated', started='06:41:41') (255) terminated with exit code None
+[2025-01-28T06:42:45.972+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=251, status='terminated', exitcode=2, started='06:41:39') (251) terminated with exit code 2

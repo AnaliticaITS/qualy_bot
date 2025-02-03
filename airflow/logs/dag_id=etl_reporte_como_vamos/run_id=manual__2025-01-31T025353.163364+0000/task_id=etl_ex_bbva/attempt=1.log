@@ -1,0 +1,53 @@
+[2025-01-31T02:53:55.281+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T02:53:55.328+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:53:53.163364+00:00 [queued]>
+[2025-01-31T02:53:55.351+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:53:53.163364+00:00 [queued]>
+[2025-01-31T02:53:55.352+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-31T02:53:55.388+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_ex_bbva> on 2025-01-31 02:53:53.163364+00:00
+[2025-01-31T02:53:55.402+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1182) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T02:53:55.406+0000] {standard_task_runner.py:72} INFO - Started process 1183 to run task
+[2025-01-31T02:53:55.407+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_ex_bbva', 'manual__2025-01-31T02:53:53.163364+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpu00kxe6q']
+[2025-01-31T02:53:55.410+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask etl_ex_bbva
+[2025-01-31T02:53:55.518+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:53:53.163364+00:00 [running]> on host 09b63ee6c6d0
+[2025-01-31T02:53:55.816+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-01-31T02:53:53.163364+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-31T02:53:53.163364+00:00'
+[2025-01-31T02:53:55.819+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T02:53:55.880+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-31T02:53:55.895+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_ex_bbva.py']
+[2025-01-31T02:53:55.945+0000] {subprocess.py:99} INFO - Output:
+[2025-01-31T02:54:01.368+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T02:54:01.370+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T02:54:01.371+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T02:54:01.372+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T02:54:01.373+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T02:54:01.426+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T02:54:01.427+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T02:54:01.428+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T02:54:01.430+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T02:54:01.432+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T02:54:01.678+0000] {subprocess.py:106} INFO - 2025-01-31 02:54:01,678 - assets - INFO - Engine para base de datos: calidad_etl creado exitosamente
+[2025-01-31T02:54:01.685+0000] {subprocess.py:106} INFO - ic| fecha_inicio: datetime.date(2025, 1, 1)
+[2025-01-31T02:54:01.687+0000] {subprocess.py:106} INFO -     fecha_fin: datetime.date(2025, 1, 31)
+[2025-01-31T02:54:02.214+0000] {subprocess.py:106} INFO - 2025-01-31 02:54:02,214 - assets - INFO - SQL query succesfully executed
+[2025-01-31T02:57:19.832+0000] {subprocess.py:106} INFO - 2025-01-31 02:57:19,831 - etl_ex_bbva - INFO - Reporte como_vamos.xlsx successfully load
+[2025-01-31T02:57:20.079+0000] {subprocess.py:106} INFO - ic| dataset.ID_ATENCION_ONYX: 0    RF1855899
+[2025-01-31T02:57:20.080+0000] {subprocess.py:106} INFO -                               1    RF1854799
+[2025-01-31T02:57:20.081+0000] {subprocess.py:106} INFO -                               2    RF1854782
+[2025-01-31T02:57:20.082+0000] {subprocess.py:106} INFO -                               3    RF1854700
+[2025-01-31T02:57:20.083+0000] {subprocess.py:106} INFO -                               4    RF1854764
+[2025-01-31T02:57:20.085+0000] {subprocess.py:106} INFO -                               5    RF1854778
+[2025-01-31T02:57:20.086+0000] {subprocess.py:106} INFO -                               6    IM2997975
+[2025-01-31T02:57:20.087+0000] {subprocess.py:106} INFO -                               7    RF1854818
+[2025-01-31T02:57:20.088+0000] {subprocess.py:106} INFO -                               8    RF1854839
+[2025-01-31T02:57:20.089+0000] {subprocess.py:106} INFO -                               9    IM3009381
+[2025-01-31T02:57:20.090+0000] {subprocess.py:106} INFO -                               Name: ID_ATENCION_ONYX, dtype: object
+[2025-01-31T02:57:20.092+0000] {subprocess.py:106} INFO - ic| dataset.ID_ATENCION_ONYX: 9    IM3009381
+[2025-01-31T02:57:20.093+0000] {subprocess.py:106} INFO -                               Name: ID_ATENCION_ONYX, dtype: object
+[2025-01-31T02:57:20.094+0000] {subprocess.py:106} INFO - 2025-01-31 02:57:20,088 - etl_ex_bbva - INFO - etl_ex_bbva.py success execution
+[2025-01-31T02:57:20.111+0000] {subprocess.py:106} INFO - Conexión exitosa a la base de datos: calidad_etl
+[2025-01-31T02:57:20.409+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-31T02:57:20.455+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T02:57:20.456+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=etl_ex_bbva, run_id=manual__2025-01-31T02:53:53.163364+00:00, execution_date=20250131T025353, start_date=20250131T025355, end_date=20250131T025720
+[2025-01-31T02:57:20.488+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-31T02:57:20.513+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-31T02:57:20.517+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

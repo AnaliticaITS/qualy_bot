@@ -1,0 +1,31 @@
+[2025-01-29T17:23:21.030+0000] {processor.py:186} INFO - Started process (PID=146) to work on /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:23:21.175+0000] {processor.py:914} INFO - Processing file /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2025-01-29T17:23:21.495+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:23:21.479+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:23:21.753+0000] {processor.py:925} INFO - DAG(s) 'example_task_group' retrieved from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:25:15.262+0000] {processor.py:186} INFO - Started process (PID=204) to work on /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:25:15.265+0000] {processor.py:914} INFO - Processing file /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2025-01-29T17:25:15.271+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:15.270+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:25:15.285+0000] {processor.py:925} INFO - DAG(s) 'example_task_group' retrieved from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:25:15.335+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:15.334+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-29T17:25:15.425+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:15.424+0000] {dag.py:3262} INFO - Creating ORM DAG for example_task_group
+[2025-01-29T17:25:15.429+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:15.429+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group to None, run_after=None
+[2025-01-29T17:25:15.544+0000] {processor.py:208} INFO - Processing /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py took 0.291 seconds
+[2025-01-29T17:58:41.323+0000] {processor.py:186} INFO - Started process (PID=92) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T17:58:47.635+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2025-01-29T17:59:06.236+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:59:01.922+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T18:00:20.337+0000] {logging_mixin.py:190} INFO - [2025-01-29T18:00:20.261+0000] {timeout.py:68} ERROR - Process timed out, PID: 92
+[2025-01-29T18:00:20.831+0000] {logging_mixin.py:190} INFO - [2025-01-29T18:00:20.670+0000] {dagbag.py:387} ERROR - Failed to import: /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1143, in get_code
+  File "<frozen importlib._bootstrap_external>", line 774, in _code_to_timestamp_pyc
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.4/best-practices.html#reducing-dag-complexity, PID: 92
+[2025-01-29T18:00:20.876+0000] {processor.py:927} WARNING - No viable dags retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py
+[2025-01-29T18:00:22.575+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group.py took 104.260 seconds

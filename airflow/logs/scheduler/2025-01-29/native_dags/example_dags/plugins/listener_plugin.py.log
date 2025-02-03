@@ -1,0 +1,5 @@
+[2025-01-29T17:25:11.763+0000] {processor.py:186} INFO - Started process (PID=186) to work on /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-01-29T17:25:11.766+0000] {processor.py:914} INFO - Processing file /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/listener_plugin.py for tasks to queue
+[2025-01-29T17:25:11.773+0000] {logging_mixin.py:190} INFO - [2025-01-29T17:25:11.772+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-01-29T17:25:11.780+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-01-29T17:25:11.814+0000] {processor.py:208} INFO - Processing /opt/bitnami/airflow/venv/lib/python3.12/site-packages/airflow/example_dags/plugins/listener_plugin.py took 0.065 seconds

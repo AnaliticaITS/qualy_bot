@@ -1,0 +1,204 @@
+[2025-02-01T00:04:31.041-0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T00:04:31.085-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-01T04:53:35.210808+00:00 [queued]>
+[2025-02-01T00:04:31.108-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-01T04:53:35.210808+00:00 [queued]>
+[2025-02-01T00:04:31.109-0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-01T00:04:31.155-0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): bot_ex_bbva> on 2025-02-01 04:53:35.210808+00:00
+[2025-02-01T00:04:31.170-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T00:04:31.178-0500] {standard_task_runner.py:72} INFO - Started process 224 to run task
+[2025-02-01T00:04:31.177-0500] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'bot_ex_bbva', 'manual__2025-02-01T04:53:35.210808+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmp290bb88a']
+[2025-02-01T00:04:31.181-0500] {standard_task_runner.py:105} INFO - Job 82: Subtask bot_ex_bbva
+[2025-02-01T00:04:31.313-0500] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-01T04:53:35.210808+00:00 [running]> on host d596638090b4
+[2025-02-01T00:04:31.576-0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='bot_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T04:53:35.210808+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T04:53:35.210808+00:00'
+[2025-02-01T00:04:31.579-0500] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T00:04:31.630-0500] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-01T00:04:31.633-0500] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_etl_ex_bbva.py']
+[2025-02-01T00:04:31.655-0500] {subprocess.py:99} INFO - Output:
+[2025-02-01T00:04:33.656-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:33,656 - bot_etl_ex_bbva - INFO - Bot ETL Exito-BBVA started
+[2025-02-01T00:04:33.835-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:33,835 - bot_etl_ex_bbva - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-02-01T00:04:36.154-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:36,153 - bot_etl_ex_bbva - INFO - Credentials input success
+[2025-02-01T00:04:37.674-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:37,673 - bot_etl_ex_bbva - INFO - Click in login button
+[2025-02-01T00:04:47.714-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:47,714 - bot_etl_ex_bbva - INFO - Loging success
+[2025-02-01T00:04:50.038-0500] {subprocess.py:106} INFO - 2025-02-01 00:04:50,038 - bot_etl_ex_bbva - INFO - Input file succes
+[2025-02-01T00:05:04.231-0500] {subprocess.py:106} INFO - 2025-02-01 00:05:04,230 - bot_etl_ex_bbva - INFO - Click in Cargar
+[2025-02-01T00:05:24.361-0500] {subprocess.py:106} INFO - 2025-02-01 00:05:24,360 - bot_etl_ex_bbva - ERROR - Error Loading Cerrados.xlsx to ETL:
+[2025-02-01T00:05:24.362-0500] {subprocess.py:106} INFO - ***Error type:*** InvalidSessionIdException
+[2025-02-01T00:05:24.365-0500] {subprocess.py:106} INFO - ***Error message:*** Message: invalid session id: session deleted as the browser has closed the connection
+[2025-02-01T00:05:24.366-0500] {subprocess.py:106} INFO - from disconnected: not connected to DevTools
+[2025-02-01T00:05:24.367-0500] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-02-01T00:05:24.368-0500] {subprocess.py:106} INFO - Stacktrace:
+[2025-02-01T00:05:24.369-0500] {subprocess.py:106} INFO - #0 0x5580e135cdca <unknown>
+[2025-02-01T00:05:24.370-0500] {subprocess.py:106} INFO - #1 0x5580e0e533f0 <unknown>
+[2025-02-01T00:05:24.371-0500] {subprocess.py:106} INFO - #2 0x5580e0e3a0b5 <unknown>
+[2025-02-01T00:05:24.372-0500] {subprocess.py:106} INFO - #3 0x5580e0e39f93 <unknown>
+[2025-02-01T00:05:24.373-0500] {subprocess.py:106} INFO - #4 0x5580e0e55762 <unknown>
+[2025-02-01T00:05:24.374-0500] {subprocess.py:106} INFO - #5 0x5580e0ee5e7f <unknown>
+[2025-02-01T00:05:24.375-0500] {subprocess.py:106} INFO - #6 0x5580e0ec7833 <unknown>
+[2025-02-01T00:05:24.376-0500] {subprocess.py:106} INFO - #7 0x5580e0e945a0 <unknown>
+[2025-02-01T00:05:24.377-0500] {subprocess.py:106} INFO - #8 0x5580e0e95ece <unknown>
+[2025-02-01T00:05:24.378-0500] {subprocess.py:106} INFO - #9 0x5580e1326bdb <unknown>
+[2025-02-01T00:05:24.379-0500] {subprocess.py:106} INFO - #10 0x5580e132ab67 <unknown>
+[2025-02-01T00:05:24.380-0500] {subprocess.py:106} INFO - #11 0x5580e13123bc <unknown>
+[2025-02-01T00:05:24.381-0500] {subprocess.py:106} INFO - #12 0x5580e132b727 <unknown>
+[2025-02-01T00:05:24.382-0500] {subprocess.py:106} INFO - #13 0x5580e12f674f <unknown>
+[2025-02-01T00:05:24.383-0500] {subprocess.py:106} INFO - #14 0x5580e134b938 <unknown>
+[2025-02-01T00:05:24.384-0500] {subprocess.py:106} INFO - #15 0x5580e134bb00 <unknown>
+[2025-02-01T00:05:24.385-0500] {subprocess.py:106} INFO - #16 0x5580e135bc46 <unknown>
+[2025-02-01T00:05:24.387-0500] {subprocess.py:106} INFO - #17 0x7fb161ed9a94 <unknown>
+[2025-02-01T00:05:24.388-0500] {subprocess.py:106} INFO - #18 0x7fb161f66c3c <unknown>
+[2025-02-01T00:05:24.390-0500] {subprocess.py:106} INFO - 
+[2025-02-01T00:05:24.392-0500] {subprocess.py:106} INFO - ***Full Traceback:*** Traceback (most recent call last):
+[2025-02-01T00:05:24.393-0500] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_etl_ex_bbva.py", line 115, in main
+[2025-02-01T00:05:24.395-0500] {subprocess.py:106} INFO -     error_text = driver.execute_script("return document.querySelector('.alert-danger')?.textContent;")
+[2025-02-01T00:05:24.396-0500] {subprocess.py:106} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-01T00:05:24.396-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 528, in execute_script
+[2025-02-01T00:05:24.397-0500] {subprocess.py:106} INFO -     return self.execute(command, {"script": script, "args": converted_args})["value"]
+[2025-02-01T00:05:24.398-0500] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-02-01T00:05:24.399-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-02-01T00:05:24.400-0500] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-02-01T00:05:24.401-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-02-01T00:05:24.403-0500] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-02-01T00:05:24.404-0500] {subprocess.py:106} INFO - selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+[2025-02-01T00:05:24.405-0500] {subprocess.py:106} INFO - from disconnected: not connected to DevTools
+[2025-02-01T00:05:24.406-0500] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-02-01T00:05:24.407-0500] {subprocess.py:106} INFO - Stacktrace:
+[2025-02-01T00:05:24.408-0500] {subprocess.py:106} INFO - #0 0x5580e135cdca <unknown>
+[2025-02-01T00:05:24.409-0500] {subprocess.py:106} INFO - #1 0x5580e0e533f0 <unknown>
+[2025-02-01T00:05:24.410-0500] {subprocess.py:106} INFO - #2 0x5580e0e3a0b5 <unknown>
+[2025-02-01T00:05:24.411-0500] {subprocess.py:106} INFO - #3 0x5580e0e39f93 <unknown>
+[2025-02-01T00:05:24.413-0500] {subprocess.py:106} INFO - #4 0x5580e0e55762 <unknown>
+[2025-02-01T00:05:24.414-0500] {subprocess.py:106} INFO - #5 0x5580e0ee5e7f <unknown>
+[2025-02-01T00:05:24.415-0500] {subprocess.py:106} INFO - #6 0x5580e0ec7833 <unknown>
+[2025-02-01T00:05:24.415-0500] {subprocess.py:106} INFO - #7 0x5580e0e945a0 <unknown>
+[2025-02-01T00:05:24.416-0500] {subprocess.py:106} INFO - #8 0x5580e0e95ece <unknown>
+[2025-02-01T00:05:24.417-0500] {subprocess.py:106} INFO - #9 0x5580e1326bdb <unknown>
+[2025-02-01T00:05:24.418-0500] {subprocess.py:106} INFO - #10 0x5580e132ab67 <unknown>
+[2025-02-01T00:05:24.419-0500] {subprocess.py:106} INFO - #11 0x5580e13123bc <unknown>
+[2025-02-01T00:05:24.420-0500] {subprocess.py:106} INFO - #12 0x5580e132b727 <unknown>
+[2025-02-01T00:05:24.421-0500] {subprocess.py:106} INFO - #13 0x5580e12f674f <unknown>
+[2025-02-01T00:05:24.422-0500] {subprocess.py:106} INFO - #14 0x5580e134b938 <unknown>
+[2025-02-01T00:05:24.423-0500] {subprocess.py:106} INFO - #15 0x5580e134bb00 <unknown>
+[2025-02-01T00:05:24.424-0500] {subprocess.py:106} INFO - #16 0x5580e135bc46 <unknown>
+[2025-02-01T00:05:24.425-0500] {subprocess.py:106} INFO - #17 0x7fb161ed9a94 <unknown>
+[2025-02-01T00:05:24.426-0500] {subprocess.py:106} INFO - #18 0x7fb161f66c3c <unknown>
+[2025-02-01T00:05:24.428-0500] {subprocess.py:106} INFO - 
+[2025-02-01T00:05:24.429-0500] {subprocess.py:106} INFO - 
+[2025-02-01T00:05:24.430-0500] {subprocess.py:106} INFO - 2025-02-01 00:05:24,390 - bot_etl_ex_bbva - INFO - bot_etl_ex_bbva finish execution
+[2025-02-01T00:05:24.430-0500] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-02-01T00:05:24.431-0500] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_etl_ex_bbva.py", line 136, in <module>
+[2025-02-01T00:05:24.432-0500] {subprocess.py:106} INFO -     main()
+[2025-02-01T00:05:24.433-0500] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_etl_ex_bbva.py", line 131, in main
+[2025-02-01T00:05:24.434-0500] {subprocess.py:106} INFO -     driver.quit()
+[2025-02-01T00:05:24.435-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 589, in quit
+[2025-02-01T00:05:24.436-0500] {subprocess.py:106} INFO -     self.execute(Command.QUIT)
+[2025-02-01T00:05:24.437-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-02-01T00:05:24.438-0500] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-02-01T00:05:24.439-0500] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-02-01T00:05:24.440-0500] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-02-01T00:05:24.441-0500] {subprocess.py:106} INFO - selenium.common.exceptions.InvalidSessionIdException: Message: Unable to find session with ID: 1f9909f5df12739d1c2a3ca5724ae4ed
+[2025-02-01T00:05:24.442-0500] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-02-01T00:05:24.443-0500] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-02-01T00:05:24.445-0500] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-02-01T00:05:24.447-0500] {subprocess.py:106} INFO - Stacktrace:
+[2025-02-01T00:05:24.448-0500] {subprocess.py:106} INFO - org.openqa.selenium.NoSuchSessionException: Unable to find session with ID: 1f9909f5df12739d1c2a3ca5724ae4ed
+[2025-02-01T00:05:24.449-0500] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-02-01T00:05:24.450-0500] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.153.1-microsoft-standard-WSL2', java.version: '17.0.13'
+[2025-02-01T00:05:24.451-0500] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-02-01T00:05:24.452-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.sessionmap.local.LocalSessionMap.get(LocalSessionMap.java:117)
+[2025-02-01T00:05:24.454-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.sessionmap.SessionMap.getUri(SessionMap.java:84)
+[2025-02-01T00:05:24.455-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.lambda$loadSessionId$4(HandleSession.java:225)
+[2025-02-01T00:05:24.456-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.execute(HandleSession.java:182)
+[2025-02-01T00:05:24.457-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:397)
+[2025-02-01T00:05:24.458-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-02-01T00:05:24.459-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-02-01T00:05:24.460-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-02-01T00:05:24.461-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.Router.execute(Router.java:89)
+[2025-02-01T00:05:24.462-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders.lambda$apply$0(EnsureSpecCompliantResponseHeaders.java:34)
+[2025-02-01T00:05:24.463-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-02-01T00:05:24.464-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-02-01T00:05:24.465-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-02-01T00:05:24.466-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.AddWebDriverSpecHeaders.lambda$apply$0(AddWebDriverSpecHeaders.java:35)
+[2025-02-01T00:05:24.467-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-02-01T00:05:24.467-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-02-01T00:05:24.468-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-02-01T00:05:24.469-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-02-01T00:05:24.470-0500] {subprocess.py:106} INFO - 	at org.openqa.selenium.netty.server.SeleniumHandler.lambda$channelRead0$0(SeleniumHandler.java:49)
+[2025-02-01T00:05:24.471-0500] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-02-01T00:05:24.472-0500] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-02-01T00:05:24.473-0500] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-02-01T00:05:24.473-0500] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-02-01T00:05:24.474-0500] {subprocess.py:106} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-02-01T00:05:24.475-0500] {subprocess.py:106} INFO - 
+[2025-02-01T00:05:24.517-0500] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-02-01T00:05:24.542-0500] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-01T00:05:24.552-0500] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reporte_como_vamos, task_id=bot_ex_bbva, run_id=manual__2025-02-01T04:53:35.210808+00:00, execution_date=20250201T045335, start_date=20250201T050431, end_date=20250201T050524
+[2025-02-01T00:05:24.582-0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T00:05:24.584-0500] {standard_task_runner.py:124} ERROR - Failed to execute job 82 for task bot_ex_bbva (Bash command failed. The command returned a non-zero exit code 1.; 224)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-01T00:05:24.620-0500] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-01T00:05:24.662-0500] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-01T00:05:24.673-0500] {local_task_job_runner.py:245} INFO - ::endgroup::

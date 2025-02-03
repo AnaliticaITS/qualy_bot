@@ -1,0 +1,201 @@
+[2025-01-30T04:52:35.919+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T04:52:35.958+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T04:52:31.011496+00:00 [queued]>
+[2025-01-30T04:52:35.976+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T04:52:31.011496+00:00 [queued]>
+[2025-01-30T04:52:35.978+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T04:52:36.006+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-30 04:52:31.011496+00:00
+[2025-01-30T04:52:36.018+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=173) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T04:52:36.023+0000] {standard_task_runner.py:72} INFO - Started process 174 to run task
+[2025-01-30T04:52:36.023+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-30T04:52:31.011496+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpp0mei56u']
+[2025-01-30T04:52:36.026+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask task_bot_como_vamos
+[2025-01-30T04:52:36.137+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T04:52:31.011496+00:00 [running]> on host c71eff5a7fe1
+[2025-01-30T04:52:36.300+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T04:52:31.011496+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T04:52:31.011496+00:00'
+[2025-01-30T04:52:36.302+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T04:52:36.364+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T04:52:36.367+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-30T04:52:36.382+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T04:52:45.372+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '30/01/2025'
+[2025-01-30T04:52:45.373+0000] {subprocess.py:106} INFO - 2025-01-30 04:52:45,372 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-30T04:52:47.466+0000] {subprocess.py:106} INFO - 2025-01-30 04:52:47,466 - bot_como_vamos - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-01-30T04:53:40.488+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="3faac68c8c2a1bc2cedb5288d55d81c4", element="f.D4934A930A0B7E55D7C42BD1AAFA062B.d.1ABEDA6E4A8927029CEB13661A3844EC.e.75")>
+[2025-01-30T04:53:40.490+0000] {subprocess.py:106} INFO - 2025-01-30 04:53:40,488 - bot_como_vamos - INFO - Loging success
+[2025-01-30T04:53:50.659+0000] {subprocess.py:106} INFO - 2025-01-30 04:53:50,659 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-01-30T04:54:00.894+0000] {subprocess.py:106} INFO - 2025-01-30 04:54:00,894 - bot_como_vamos - INFO - Input dates successfully
+[2025-01-30T04:54:11.022+0000] {subprocess.py:106} INFO - 2025-01-30 04:54:11,022 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-01-30T04:54:21.144+0000] {subprocess.py:106} INFO - 2025-01-30 04:54:21,144 - bot_como_vamos - ERROR - Execution error bot_reporte_como_vamos.py:
+[2025-01-30T04:54:21.146+0000] {subprocess.py:106} INFO - ***Error type:*** ElementNotInteractableException
+[2025-01-30T04:54:21.147+0000] {subprocess.py:106} INFO - ***Error message:*** Message: element not interactable
+[2025-01-30T04:54:21.148+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-30T04:54:21.149+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T04:54:21.151+0000] {subprocess.py:106} INFO - #0 0x564d980a6dca <unknown>
+[2025-01-30T04:54:21.152+0000] {subprocess.py:106} INFO - #1 0x564d97b9d24d <unknown>
+[2025-01-30T04:54:21.153+0000] {subprocess.py:106} INFO - #2 0x564d97bee2d9 <unknown>
+[2025-01-30T04:54:21.155+0000] {subprocess.py:106} INFO - #3 0x564d97be12bd <unknown>
+[2025-01-30T04:54:21.157+0000] {subprocess.py:106} INFO - #4 0x564d97c11a92 <unknown>
+[2025-01-30T04:54:21.159+0000] {subprocess.py:106} INFO - #5 0x564d97be0c48 <unknown>
+[2025-01-30T04:54:21.160+0000] {subprocess.py:106} INFO - #6 0x564d97c11c5e <unknown>
+[2025-01-30T04:54:21.162+0000] {subprocess.py:106} INFO - #7 0x564d97c304b3 <unknown>
+[2025-01-30T04:54:21.163+0000] {subprocess.py:106} INFO - #8 0x564d97c11833 <unknown>
+[2025-01-30T04:54:21.164+0000] {subprocess.py:106} INFO - #9 0x564d97bde5a0 <unknown>
+[2025-01-30T04:54:21.165+0000] {subprocess.py:106} INFO - #10 0x564d97bdfece <unknown>
+[2025-01-30T04:54:21.166+0000] {subprocess.py:106} INFO - #11 0x564d98070bdb <unknown>
+[2025-01-30T04:54:21.167+0000] {subprocess.py:106} INFO - #12 0x564d98074b67 <unknown>
+[2025-01-30T04:54:21.168+0000] {subprocess.py:106} INFO - #13 0x564d9805c3bc <unknown>
+[2025-01-30T04:54:21.170+0000] {subprocess.py:106} INFO - #14 0x564d98075727 <unknown>
+[2025-01-30T04:54:21.171+0000] {subprocess.py:106} INFO - #15 0x564d9804074f <unknown>
+[2025-01-30T04:54:21.173+0000] {subprocess.py:106} INFO - #16 0x564d98095938 <unknown>
+[2025-01-30T04:54:21.174+0000] {subprocess.py:106} INFO - #17 0x564d98095b00 <unknown>
+[2025-01-30T04:54:21.176+0000] {subprocess.py:106} INFO - #18 0x564d980a5c46 <unknown>
+[2025-01-30T04:54:21.177+0000] {subprocess.py:106} INFO - #19 0x7f62fbf01a94 <unknown>
+[2025-01-30T04:54:21.178+0000] {subprocess.py:106} INFO - #20 0x7f62fbf8ec3c <unknown>
+[2025-01-30T04:54:21.179+0000] {subprocess.py:106} INFO - 
+[2025-01-30T04:54:21.181+0000] {subprocess.py:106} INFO - ***Full Traceback:*** Traceback (most recent call last):
+[2025-01-30T04:54:21.182+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 137, in main
+[2025-01-30T04:54:21.183+0000] {subprocess.py:106} INFO -     reporte_como_vamos.click()
+[2025-01-30T04:54:21.184+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 119, in click
+[2025-01-30T04:54:21.185+0000] {subprocess.py:106} INFO -     self._execute(Command.CLICK_ELEMENT)
+[2025-01-30T04:54:21.186+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 570, in _execute
+[2025-01-30T04:54:21.188+0000] {subprocess.py:106} INFO -     return self._parent.execute(command, params)
+[2025-01-30T04:54:21.189+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T04:54:21.191+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-30T04:54:21.192+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-30T04:54:21.193+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-30T04:54:21.195+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-30T04:54:21.196+0000] {subprocess.py:106} INFO - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+[2025-01-30T04:54:21.197+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-30T04:54:21.198+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T04:54:21.199+0000] {subprocess.py:106} INFO - #0 0x564d980a6dca <unknown>
+[2025-01-30T04:54:21.200+0000] {subprocess.py:106} INFO - #1 0x564d97b9d24d <unknown>
+[2025-01-30T04:54:21.201+0000] {subprocess.py:106} INFO - #2 0x564d97bee2d9 <unknown>
+[2025-01-30T04:54:21.202+0000] {subprocess.py:106} INFO - #3 0x564d97be12bd <unknown>
+[2025-01-30T04:54:21.204+0000] {subprocess.py:106} INFO - #4 0x564d97c11a92 <unknown>
+[2025-01-30T04:54:21.205+0000] {subprocess.py:106} INFO - #5 0x564d97be0c48 <unknown>
+[2025-01-30T04:54:21.207+0000] {subprocess.py:106} INFO - #6 0x564d97c11c5e <unknown>
+[2025-01-30T04:54:21.208+0000] {subprocess.py:106} INFO - #7 0x564d97c304b3 <unknown>
+[2025-01-30T04:54:21.210+0000] {subprocess.py:106} INFO - #8 0x564d97c11833 <unknown>
+[2025-01-30T04:54:21.211+0000] {subprocess.py:106} INFO - #9 0x564d97bde5a0 <unknown>
+[2025-01-30T04:54:21.212+0000] {subprocess.py:106} INFO - #10 0x564d97bdfece <unknown>
+[2025-01-30T04:54:21.213+0000] {subprocess.py:106} INFO - #11 0x564d98070bdb <unknown>
+[2025-01-30T04:54:21.214+0000] {subprocess.py:106} INFO - #12 0x564d98074b67 <unknown>
+[2025-01-30T04:54:21.215+0000] {subprocess.py:106} INFO - #13 0x564d9805c3bc <unknown>
+[2025-01-30T04:54:21.217+0000] {subprocess.py:106} INFO - #14 0x564d98075727 <unknown>
+[2025-01-30T04:54:21.218+0000] {subprocess.py:106} INFO - #15 0x564d9804074f <unknown>
+[2025-01-30T04:54:21.219+0000] {subprocess.py:106} INFO - #16 0x564d98095938 <unknown>
+[2025-01-30T04:54:21.220+0000] {subprocess.py:106} INFO - #17 0x564d98095b00 <unknown>
+[2025-01-30T04:54:21.221+0000] {subprocess.py:106} INFO - #18 0x564d980a5c46 <unknown>
+[2025-01-30T04:54:21.222+0000] {subprocess.py:106} INFO - #19 0x7f62fbf01a94 <unknown>
+[2025-01-30T04:54:21.224+0000] {subprocess.py:106} INFO - #20 0x7f62fbf8ec3c <unknown>
+[2025-01-30T04:54:21.225+0000] {subprocess.py:106} INFO - 
+[2025-01-30T04:54:21.226+0000] {subprocess.py:106} INFO - 
+[2025-01-30T04:54:21.227+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-30T04:54:21.228+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 173, in <module>
+[2025-01-30T04:54:21.229+0000] {subprocess.py:106} INFO -     main()
+[2025-01-30T04:54:21.230+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 137, in main
+[2025-01-30T04:54:21.231+0000] {subprocess.py:106} INFO -     reporte_como_vamos.click()
+[2025-01-30T04:54:21.232+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 119, in click
+[2025-01-30T04:54:21.234+0000] {subprocess.py:106} INFO -     self._execute(Command.CLICK_ELEMENT)
+[2025-01-30T04:54:21.235+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 570, in _execute
+[2025-01-30T04:54:21.237+0000] {subprocess.py:106} INFO -     return self._parent.execute(command, params)
+[2025-01-30T04:54:21.238+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T04:54:21.239+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-30T04:54:21.241+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-30T04:54:21.242+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-30T04:54:21.243+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-30T04:54:21.244+0000] {subprocess.py:106} INFO - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+[2025-01-30T04:54:21.245+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-30T04:54:21.246+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-30T04:54:21.248+0000] {subprocess.py:106} INFO - #0 0x564d980a6dca <unknown>
+[2025-01-30T04:54:21.249+0000] {subprocess.py:106} INFO - #1 0x564d97b9d24d <unknown>
+[2025-01-30T04:54:21.250+0000] {subprocess.py:106} INFO - #2 0x564d97bee2d9 <unknown>
+[2025-01-30T04:54:21.251+0000] {subprocess.py:106} INFO - #3 0x564d97be12bd <unknown>
+[2025-01-30T04:54:21.252+0000] {subprocess.py:106} INFO - #4 0x564d97c11a92 <unknown>
+[2025-01-30T04:54:21.253+0000] {subprocess.py:106} INFO - #5 0x564d97be0c48 <unknown>
+[2025-01-30T04:54:21.254+0000] {subprocess.py:106} INFO - #6 0x564d97c11c5e <unknown>
+[2025-01-30T04:54:21.256+0000] {subprocess.py:106} INFO - #7 0x564d97c304b3 <unknown>
+[2025-01-30T04:54:21.256+0000] {subprocess.py:106} INFO - #8 0x564d97c11833 <unknown>
+[2025-01-30T04:54:21.258+0000] {subprocess.py:106} INFO - #9 0x564d97bde5a0 <unknown>
+[2025-01-30T04:54:21.259+0000] {subprocess.py:106} INFO - #10 0x564d97bdfece <unknown>
+[2025-01-30T04:54:21.260+0000] {subprocess.py:106} INFO - #11 0x564d98070bdb <unknown>
+[2025-01-30T04:54:21.261+0000] {subprocess.py:106} INFO - #12 0x564d98074b67 <unknown>
+[2025-01-30T04:54:21.262+0000] {subprocess.py:106} INFO - #13 0x564d9805c3bc <unknown>
+[2025-01-30T04:54:21.262+0000] {subprocess.py:106} INFO - #14 0x564d98075727 <unknown>
+[2025-01-30T04:54:21.263+0000] {subprocess.py:106} INFO - #15 0x564d9804074f <unknown>
+[2025-01-30T04:54:21.265+0000] {subprocess.py:106} INFO - #16 0x564d98095938 <unknown>
+[2025-01-30T04:54:21.266+0000] {subprocess.py:106} INFO - #17 0x564d98095b00 <unknown>
+[2025-01-30T04:54:21.267+0000] {subprocess.py:106} INFO - #18 0x564d980a5c46 <unknown>
+[2025-01-30T04:54:21.268+0000] {subprocess.py:106} INFO - #19 0x7f62fbf01a94 <unknown>
+[2025-01-30T04:54:21.269+0000] {subprocess.py:106} INFO - #20 0x7f62fbf8ec3c <unknown>
+[2025-01-30T04:54:21.270+0000] {subprocess.py:106} INFO - 
+[2025-01-30T04:54:21.431+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-01-30T04:54:21.457+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-30T04:54:21.468+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-30T04:52:31.011496+00:00, execution_date=20250130T045231, start_date=20250130T045235, end_date=20250130T045421
+[2025-01-30T04:54:21.511+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T04:54:21.513+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 35 for task task_bot_como_vamos (Bash command failed. The command returned a non-zero exit code 1.; 174)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-30T04:54:21.576+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-30T04:54:21.617+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T04:54:21.628+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

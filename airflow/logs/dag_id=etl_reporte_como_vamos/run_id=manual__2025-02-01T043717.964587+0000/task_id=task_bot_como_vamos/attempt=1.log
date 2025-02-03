@@ -1,0 +1,37 @@
+[2025-02-01T04:37:21.328+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T04:37:21.363+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-02-01T04:37:17.964587+00:00 [queued]>
+[2025-02-01T04:37:21.383+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-02-01T04:37:17.964587+00:00 [queued]>
+[2025-02-01T04:37:21.384+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-01T04:37:21.420+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-02-01 04:37:17.964587+00:00
+[2025-02-01T04:37:21.435+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=92) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T04:37:21.440+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-02-01T04:37:17.964587+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmptb8j71v6']
+[2025-02-01T04:37:21.443+0000] {standard_task_runner.py:72} INFO - Started process 93 to run task
+[2025-02-01T04:37:21.444+0000] {standard_task_runner.py:105} INFO - Job 76: Subtask task_bot_como_vamos
+[2025-02-01T04:37:21.593+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-02-01T04:37:17.964587+00:00 [running]> on host 4f5f0379e751
+[2025-02-01T04:37:21.787+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T04:37:17.964587+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T04:37:17.964587+00:00'
+[2025-02-01T04:37:21.790+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T04:37:21.863+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-01T04:37:21.866+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-02-01T04:37:21.883+0000] {subprocess.py:99} INFO - Output:
+[2025-02-01T04:37:33.095+0000] {subprocess.py:106} INFO - ic| hoy: datetime.date(2025, 2, 1)
+[2025-02-01T04:37:33.097+0000] {subprocess.py:106} INFO -     fecha_inicio: datetime.date(2025, 2, 1)
+[2025-02-01T04:37:33.178+0000] {subprocess.py:106} INFO - ic| start_date: '01/02/2025', end_date: '01/02/2025'
+[2025-02-01T04:37:33.180+0000] {subprocess.py:106} INFO - 2025-02-01 04:37:33,178 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-02-01T04:37:36.407+0000] {subprocess.py:106} INFO - 2025-02-01 04:37:36,406 - bot_como_vamos - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-02-01T04:38:11.091+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="68b5c17f1bf928031b456c6ffe9840f7", element="f.AD0A9330DA70D5CBBA64EB287C0DBCE9.d.2679103910D3D300F7F0EC6DEAA8CBCA.e.77")>
+[2025-02-01T04:38:11.092+0000] {subprocess.py:106} INFO - 2025-02-01 04:38:11,091 - bot_como_vamos - INFO - Loging success
+[2025-02-01T04:38:21.364+0000] {subprocess.py:106} INFO - 2025-02-01 04:38:21,362 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-02-01T04:38:32.025+0000] {subprocess.py:106} INFO - 2025-02-01 04:38:32,025 - bot_como_vamos - INFO - Input dates successfully
+[2025-02-01T04:38:42.246+0000] {subprocess.py:106} INFO - 2025-02-01 04:38:42,245 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-02-01T04:38:53.652+0000] {subprocess.py:106} INFO - 2025-02-01 04:38:53,651 - assets - INFO - Waiting for download file...............
+[2025-02-01T04:40:18.657+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-02-01T04:40:18.659+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-01T04:40:18.663+0000] {process_utils.py:132} INFO - Sending 15 to group 93. PIDs of all processes in the group: [95, 93]
+[2025-02-01T04:40:18.664+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 93
+[2025-02-01T04:40:18.665+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-01T04:40:18.666+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-02-01T04:40:18.707+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T04:40:18.758+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=95, status='terminated', started='04:37:21') (95) terminated with exit code None
+[2025-02-01T04:40:18.759+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=93, status='terminated', exitcode=0, started='04:37:21') (93) terminated with exit code 0

@@ -1,0 +1,253 @@
+[2025-01-28T06:25:30.295+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T06:25:30.311+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:14:33.971206+00:00 [queued]>
+[2025-01-28T06:25:30.320+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:14:33.971206+00:00 [queued]>
+[2025-01-28T06:25:30.322+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 3
+[2025-01-28T06:25:30.338+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-28 06:14:33.971206+00:00
+[2025-01-28T06:25:30.344+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-28T06:14:33.971206+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpor6kjts2']
+[2025-01-28T06:25:30.346+0000] {standard_task_runner.py:105} INFO - Job 46: Subtask task_bot_como_vamos
+[2025-01-28T06:25:30.347+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1624) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T06:25:30.350+0000] {standard_task_runner.py:72} INFO - Started process 1625 to run task
+[2025-01-28T06:25:30.406+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:14:33.971206+00:00 [running]> on host afb55d3219bf
+[2025-01-28T06:25:30.665+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T06:14:33.971206+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T06:14:33.971206+00:00'
+[2025-01-28T06:25:30.666+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T06:25:30.687+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T06:25:30.688+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-28T06:25:30.697+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T06:25:32.986+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '28/01/2025'
+[2025-01-28T06:25:32.991+0000] {subprocess.py:106} INFO - 2025-01-28 06:25:32,986 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-28T06:25:56.829+0000] {job.py:229} INFO - Heartbeat recovered after 15.17 seconds
+[2025-01-28T06:26:18.356+0000] {job.py:229} INFO - Heartbeat recovered after 23.34 seconds
+[2025-01-28T06:26:35.134+0000] {job.py:229} INFO - Heartbeat recovered after 17.24 seconds
+[2025-01-28T06:26:43.133+0000] {subprocess.py:106} INFO - 2025-01-28 06:26:43,131 - root - ERROR - Execution error: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: session not created
+[2025-01-28T06:26:43.167+0000] {subprocess.py:106} INFO - from chrome not reachable
+[2025-01-28T06:26:43.169+0000] {subprocess.py:106} INFO - Host info: host: '5cf1422c2c4a', ip: '172.18.0.5'
+[2025-01-28T06:26:43.171+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:26:43.174+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:26:43.177+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:26:43.179+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:26:43.181+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:26:43.184+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:26:43.186+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:26:43.188+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:26:43.190+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:26:43.192+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-28T06:26:43.193+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:167)
+[2025-01-28T06:26:43.195+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:678)
+[2025-01-28T06:26:43.197+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:597)
+[2025-01-28T06:26:43.199+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:861)
+[2025-01-28T06:26:43.201+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:818)
+[2025-01-28T06:26:43.203+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+[2025-01-28T06:26:43.205+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+[2025-01-28T06:26:43.207+0000] {subprocess.py:106} INFO -     at java.lang.Thread.run (Thread.java:840)
+[2025-01-28T06:26:43.258+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:26:43.260+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:26:43.262+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:26:48.283+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:26:48.291+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:26:48.293+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:26:53.476+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:26:53.477+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:26:53.483+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:26:58.483+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:26:58.484+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:26:58.485+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:03.485+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:03.487+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:03.488+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:08.507+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:08.509+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:08.510+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:13.509+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:13.510+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:13.511+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:18.526+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:18.527+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:18.529+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:23.527+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:23.529+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:23.530+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:28.529+0000] {subprocess.py:106} INFO - ic| file: '***tmpves6t_7v'
+[2025-01-28T06:27:28.531+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:27:28.532+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:27:31.860+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-01-28T06:27:31.862+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-28T06:27:31.867+0000] {process_utils.py:132} INFO - Sending 15 to group 1625. PIDs of all processes in the group: [1627, 1625]
+[2025-01-28T06:27:31.869+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1625
+[2025-01-28T06:27:31.871+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-28T06:27:31.871+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-01-28T06:27:31.889+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-28T06:27:31.899+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-28T06:14:33.971206+00:00, execution_date=20250128T061433, start_date=20250128T062530, end_date=20250128T062731
+[2025-01-28T06:27:31.914+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T06:27:31.916+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 46 for task task_bot_como_vamos ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(etl_reporte_como_vamos, task_bot_como_vamos, manual__2025-01-28T06:14:33.971206+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'task_bot_como_vamos', 'dag_id': 'etl_reporte_como_vamos', 'run_id': 'manual__2025-01-28T06:14:33.971206+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 1, 28, 6, 25, 30, 313148, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 1, 28, 6, 27, 31, 899384, tzinfo=Timezone('UTC')), 'duration': 121}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 1625)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(etl_reporte_como_vamos, task_bot_como_vamos, manual__2025-01-28T06:14:33.971206+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 327, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3428, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1243, in _handle_failure
+    TaskInstance.save_to_db(failure_context["ti"], session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3400, in save_to_db
+    session.flush()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(etl_reporte_como_vamos, task_bot_como_vamos, manual__2025-01-28T06:14:33.971206+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'task_bot_como_vamos', 'dag_id': 'etl_reporte_como_vamos', 'run_id': 'manual__2025-01-28T06:14:33.971206+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 1, 28, 6, 25, 30, 313148, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 1, 28, 6, 27, 31, 899384, tzinfo=Timezone('UTC')), 'duration': 121}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-01-28T06:27:31.967+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1625, status='terminated', exitcode=1, started='06:25:30') (1625) terminated with exit code 1
+[2025-01-28T06:27:31.970+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1627, status='terminated', started='06:25:30') (1627) terminated with exit code None

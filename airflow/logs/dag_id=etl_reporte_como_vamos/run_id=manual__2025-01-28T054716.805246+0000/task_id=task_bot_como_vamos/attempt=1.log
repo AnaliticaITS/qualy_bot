@@ -1,0 +1,507 @@
+[2025-01-28T05:47:19.698+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T05:47:19.755+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T05:47:16.805246+00:00 [queued]>
+[2025-01-28T05:47:19.792+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T05:47:16.805246+00:00 [queued]>
+[2025-01-28T05:47:19.796+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-28T05:47:19.832+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-28 05:47:16.805246+00:00
+[2025-01-28T05:47:19.845+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-28T05:47:16.805246+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmptt4z8_vv']
+[2025-01-28T05:47:19.852+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask task_bot_como_vamos
+[2025-01-28T05:47:19.858+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=261) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T05:47:19.860+0000] {standard_task_runner.py:72} INFO - Started process 268 to run task
+[2025-01-28T05:47:20.041+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T05:47:16.805246+00:00 [running]> on host afb55d3219bf
+[2025-01-28T05:47:21.133+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T05:47:16.805246+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T05:47:16.805246+00:00'
+[2025-01-28T05:47:21.138+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T05:47:21.238+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T05:47:21.242+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-28T05:47:21.265+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T05:47:27.116+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '28/01/2025'
+[2025-01-28T05:47:27.118+0000] {subprocess.py:106} INFO - 2025-01-28 05:47:27,116 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-28T05:48:06.711+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="f36abf5cf487cd7537288d428853532b", element="f.7D0F71182BD92E937C12A42203ABCA62.d.1CF5FC69487B3271195DD8AFAB7C68BC.e.105")>
+[2025-01-28T05:48:06.718+0000] {subprocess.py:106} INFO - 2025-01-28 05:48:06,710 - bot_como_vamos - INFO - Loging success
+[2025-01-28T05:48:17.055+0000] {subprocess.py:106} INFO - 2025-01-28 05:48:17,049 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-01-28T05:48:27.610+0000] {subprocess.py:106} INFO - 2025-01-28 05:48:27,605 - bot_como_vamos - INFO - Input dates successfully
+[2025-01-28T05:48:38.052+0000] {subprocess.py:106} INFO - 2025-01-28 05:48:38,049 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-01-28T05:51:46.004+0000] {subprocess.py:106} INFO - 2025-01-28 05:51:46,001 - bot_como_vamos - INFO - Click in 'Como Vamos' successfully
+[2025-01-28T05:51:51.275+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:51:51.312+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:51:51.329+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:51:56.293+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:51:56.299+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:51:56.301+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:01.341+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:01.349+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:01.351+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:06.385+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:06.393+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:06.394+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:11.388+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:11.407+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:11.410+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:16.426+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:16.433+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:16.434+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:21.442+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:21.448+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:21.450+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:26.471+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:26.475+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:26.477+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:31.512+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:31.519+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:31.520+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:36.531+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:36.537+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:36.538+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:41.545+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:41.553+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:41.554+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:46.567+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:46.573+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:46.575+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:51.599+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:51.604+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:51.605+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:52:56.614+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:52:56.617+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:52:56.619+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:01.630+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:01.636+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:01.637+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:06.656+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:06.661+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:06.662+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:11.667+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:11.672+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:11.673+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:16.691+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:16.697+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:16.698+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:21.711+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:21.717+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:21.718+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:26.723+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:26.727+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:26.727+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:31.743+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:31.749+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:31.751+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:36.776+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:36.782+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:36.783+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:41.790+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:41.794+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:41.795+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:46.815+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:46.820+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:46.820+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:51.833+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:51.839+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:51.840+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:53:56.869+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:53:56.874+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:53:56.875+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:01.893+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:01.900+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:01.901+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:06.909+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:06.914+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:06.916+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:11.929+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:11.931+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:11.932+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:16.931+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:16.932+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:16.934+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:21.933+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:21.934+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:21.935+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:26.946+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:26.948+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:26.949+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:31.949+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:31.950+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:31.955+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:36.951+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:36.952+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:36.954+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:41.953+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:41.955+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:41.956+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:46.966+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:46.968+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:46.969+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:51.969+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:51.970+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:51.980+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:54:56.982+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:54:56.984+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:54:56.986+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:01.985+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:01.987+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:01.988+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:06.987+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:06.999+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:07.000+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:11.999+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:12.001+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:12.002+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:17.002+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:17.004+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:17.006+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:22.004+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:22.006+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:22.007+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:27.007+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:27.018+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:27.019+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:32.020+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:32.026+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:32.028+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:37.023+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:37.025+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:37.027+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:42.026+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:42.027+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:42.030+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:47.042+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:47.045+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:47.047+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:52.047+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:52.059+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:52.060+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:55:57.049+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:55:57.060+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:55:57.062+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:02.062+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:02.066+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:02.067+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:07.065+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:07.070+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:07.071+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:12.073+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:12.074+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:12.076+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:17.076+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:17.079+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:17.081+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:22.083+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:22.084+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:22.085+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:27.085+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:27.086+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:27.087+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:32.087+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:32.089+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:32.090+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:37.091+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:37.092+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:37.093+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:42.092+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:42.094+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:42.095+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:47.095+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:47.098+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:47.106+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:52.110+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:52.112+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:52.112+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:56:57.113+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:56:57.184+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:56:57.185+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:02.116+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:02.118+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:02.119+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:07.119+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:07.125+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:07.127+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:12.121+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:12.123+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:12.125+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:17.125+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:17.126+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:17.128+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:22.129+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:22.130+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:22.131+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:27.141+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:27.144+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:27.145+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:32.144+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:32.146+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:32.148+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:37.147+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:37.158+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:37.160+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:42.161+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:42.162+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:42.163+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:47.163+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:47.165+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:47.167+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:52.165+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:52.166+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:52.168+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:57:57.167+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:57:57.168+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:57:57.170+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:02.169+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:02.171+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:02.173+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:07.172+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:07.174+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:07.175+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:12.175+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:12.185+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:12.187+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:17.187+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:17.189+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:17.189+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:22.192+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:22.194+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:22.196+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:27.195+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:27.197+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:27.199+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:32.199+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:32.204+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:32.207+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:37.201+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:37.203+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:37.204+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:42.213+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:42.215+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:42.217+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:47.216+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:47.219+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:47.220+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:52.219+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:52.221+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:52.223+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:58:57.222+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:58:57.233+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:58:57.235+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:02.234+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:02.236+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:02.237+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:07.236+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:07.238+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:07.247+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:12.248+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:12.253+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:12.254+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:17.254+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:17.255+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:17.258+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:22.260+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:22.262+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:22.264+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:27.264+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:27.266+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:27.268+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:32.267+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:32.268+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:32.270+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:37.269+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:37.270+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:37.271+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:42.271+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:42.274+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:42.275+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:47.274+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:47.276+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:47.278+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:52.276+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:52.278+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:52.280+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T05:59:57.280+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T05:59:57.282+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T05:59:57.283+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:02.282+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:02.285+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:02.287+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:07.285+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:07.286+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:07.288+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:12.288+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:12.289+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:12.290+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:17.290+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:17.302+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:17.303+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:22.303+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:22.305+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:22.307+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:27.306+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:27.308+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:27.309+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:32.311+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:32.312+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:32.314+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:37.313+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:37.315+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:37.319+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:42.320+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:42.321+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:42.322+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:47.322+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:47.323+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:47.324+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:52.326+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:52.328+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:52.329+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:00:57.329+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:00:57.331+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:00:57.333+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:02.332+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:02.333+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:02.334+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:07.335+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:07.337+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:07.338+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:12.338+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:12.339+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:12.339+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:17.340+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:17.341+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:17.342+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:22.342+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:22.343+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:22.344+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:27.343+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:27.345+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:27.346+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:32.345+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:32.357+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:32.359+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:37.348+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:37.350+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:37.352+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:42.352+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:42.354+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:42.356+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:47.355+0000] {subprocess.py:106} INFO - ic| file: '***tmpabmwbuvc'
+[2025-01-28T06:01:47.359+0000] {subprocess.py:106} INFO - ic| file: 'pymp-qmczygfr'
+[2025-01-28T06:01:47.360+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:01:52.373+0000] {subprocess.py:106} INFO - 2025-01-28 06:01:52,369 - bot_como_vamos - ERROR - Exceeded the waiting time - Reporte como_vamos.xlsx doesn't downloaded
+[2025-01-28T06:01:52.414+0000] {subprocess.py:106} INFO - Starting script bot_como_vamos.py
+[2025-01-28T06:01:52.415+0000] {subprocess.py:106} INFO - Waiting for download file...........
+[2025-01-28T06:01:52.417+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-28T06:01:52.418+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 157, in <module>
+[2025-01-28T06:01:52.431+0000] {subprocess.py:106} INFO -     main()
+[2025-01-28T06:01:52.432+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 152, in main
+[2025-01-28T06:01:52.439+0000] {subprocess.py:106} INFO -     driver.quit()
+[2025-01-28T06:01:52.441+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 589, in quit
+[2025-01-28T06:01:52.442+0000] {subprocess.py:106} INFO -     self.execute(Command.QUIT)
+[2025-01-28T06:01:52.442+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-28T06:01:52.443+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-28T06:01:52.444+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-28T06:01:52.445+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-28T06:01:52.446+0000] {subprocess.py:106} INFO - selenium.common.exceptions.InvalidSessionIdException: Message: Unable to find session with ID: f36abf5cf487cd7537288d428853532b
+[2025-01-28T06:01:52.446+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:01:52.447+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:01:52.448+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:01:52.449+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-28T06:01:52.449+0000] {subprocess.py:106} INFO - org.openqa.selenium.NoSuchSessionException: Unable to find session with ID: f36abf5cf487cd7537288d428853532b
+[2025-01-28T06:01:52.450+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:01:52.450+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:01:52.451+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:01:52.452+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.sessionmap.local.LocalSessionMap.get(LocalSessionMap.java:117)
+[2025-01-28T06:01:52.452+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.sessionmap.SessionMap.getUri(SessionMap.java:84)
+[2025-01-28T06:01:52.453+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.lambda$loadSessionId$4(HandleSession.java:225)
+[2025-01-28T06:01:52.453+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.HandleSession.execute(HandleSession.java:182)
+[2025-01-28T06:01:52.454+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:397)
+[2025-01-28T06:01:52.455+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-28T06:01:52.456+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-28T06:01:52.457+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-28T06:01:52.457+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.router.Router.execute(Router.java:89)
+[2025-01-28T06:01:52.458+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders.lambda$apply$0(EnsureSpecCompliantResponseHeaders.java:34)
+[2025-01-28T06:01:52.458+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-28T06:01:52.459+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-28T06:01:52.459+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-28T06:01:52.460+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$NestedRoute.handle(Route.java:270)
+[2025-01-28T06:01:52.460+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-28T06:01:52.461+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:360)
+[2025-01-28T06:01:52.463+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+[2025-01-28T06:01:52.464+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.AddWebDriverSpecHeaders.lambda$apply$0(AddWebDriverSpecHeaders.java:35)
+[2025-01-28T06:01:52.465+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-28T06:01:52.466+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-28T06:01:52.466+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.ErrorFilter.lambda$apply$0(ErrorFilter.java:44)
+[2025-01-28T06:01:52.467+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+[2025-01-28T06:01:52.467+0000] {subprocess.py:106} INFO - 	at org.openqa.selenium.netty.server.SeleniumHandler.lambda$channelRead0$0(SeleniumHandler.java:49)
+[2025-01-28T06:01:52.469+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-01-28T06:01:52.469+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-01-28T06:01:52.470+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-01-28T06:01:52.471+0000] {subprocess.py:106} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-01-28T06:01:52.472+0000] {subprocess.py:106} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-01-28T06:01:52.473+0000] {subprocess.py:106} INFO - 
+[2025-01-28T06:01:53.733+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-01-28T06:01:54.011+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-28T06:01:54.110+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-28T05:47:16.805246+00:00, execution_date=20250128T054716, start_date=20250128T054719, end_date=20250128T060154
+[2025-01-28T06:01:54.222+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T06:01:54.228+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 43 for task task_bot_como_vamos (Bash command failed. The command returned a non-zero exit code 1.; 268)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-28T06:01:54.274+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-28T06:01:54.298+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T06:01:54.301+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

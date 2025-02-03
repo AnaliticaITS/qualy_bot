@@ -1,0 +1,128 @@
+[2025-01-28T04:07:36.999+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T04:07:38.509+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T04:07:32.142210+00:00 [queued]>
+[2025-01-28T04:07:38.537+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T04:07:32.142210+00:00 [queued]>
+[2025-01-28T04:07:38.539+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-28T04:07:38.577+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-28 04:07:32.142210+00:00
+[2025-01-28T04:07:38.593+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-28T04:07:32.142210+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmprpo6_m7c']
+[2025-01-28T04:07:38.599+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask task_bot_como_vamos
+[2025-01-28T04:07:38.604+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=389) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T04:07:38.608+0000] {standard_task_runner.py:72} INFO - Started process 395 to run task
+[2025-01-28T04:07:38.737+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T04:07:32.142210+00:00 [running]> on host 9f50f588cff7
+[2025-01-28T04:07:38.907+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T04:07:32.142210+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T04:07:32.142210+00:00'
+[2025-01-28T04:07:38.909+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T04:07:38.979+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T04:07:38.981+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-28T04:07:38.998+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T04:07:48.468+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '28/01/2025'
+[2025-01-28T04:07:48.478+0000] {subprocess.py:106} INFO - 2025-01-28 04:07:48,467 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-28T04:08:11.714+0000] {job.py:229} INFO - Heartbeat recovered after 10.91 seconds
+[2025-01-28T04:08:14.514+0000] {subprocess.py:106} INFO - Starting script bot_como_vamos.py
+[2025-01-28T04:08:14.536+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-28T04:08:14.537+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 143, in <module>
+[2025-01-28T04:08:14.573+0000] {subprocess.py:106} INFO -     main()
+[2025-01-28T04:08:14.577+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/bot_reporte_como_vamos.py", line 65, in main
+[2025-01-28T04:08:14.602+0000] {subprocess.py:106} INFO -     driver = webdriver.Remote(command_executor='http://selenium-hub:4444', options=chrome_options)
+[2025-01-28T04:08:14.606+0000] {subprocess.py:106} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-28T04:08:14.611+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+[2025-01-28T04:08:14.614+0000] {subprocess.py:106} INFO -     self.start_session(capabilities)
+[2025-01-28T04:08:14.617+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+[2025-01-28T04:08:14.621+0000] {subprocess.py:106} INFO -     response = self.execute(Command.NEW_SESSION, caps)["value"]
+[2025-01-28T04:08:14.624+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-28T04:08:14.626+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2025-01-28T04:08:14.629+0000] {subprocess.py:106} INFO -     self.error_handler.check_response(response)
+[2025-01-28T04:08:14.631+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+[2025-01-28T04:08:14.633+0000] {subprocess.py:106} INFO -     raise exception_class(message, screen, stacktrace)
+[2025-01-28T04:08:14.636+0000] {subprocess.py:106} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: tab crashed
+[2025-01-28T04:08:14.638+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-28T04:08:14.640+0000] {subprocess.py:106} INFO - Host info: host: '96296f3d96a8', ip: '172.18.0.5'
+[2025-01-28T04:08:14.643+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T04:08:14.645+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T04:08:14.648+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T04:08:14.650+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T04:08:14.652+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T04:08:14.653+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T04:08:14.656+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T04:08:14.660+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T04:08:14.664+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T04:08:14.666+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-28T04:08:14.667+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:167)
+[2025-01-28T04:08:14.669+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:678)
+[2025-01-28T04:08:14.672+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:597)
+[2025-01-28T04:08:14.674+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:861)
+[2025-01-28T04:08:14.677+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:818)
+[2025-01-28T04:08:14.679+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+[2025-01-28T04:08:14.681+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+[2025-01-28T04:08:14.682+0000] {subprocess.py:106} INFO -     at java.lang.Thread.run (Thread.java:840)
+[2025-01-28T04:08:15.116+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-01-28T04:08:15.299+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-28T04:08:15.372+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-28T04:07:32.142210+00:00, execution_date=20250128T040732, start_date=20250128T040738, end_date=20250128T040815
+[2025-01-28T04:08:15.473+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T04:08:15.478+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 16 for task task_bot_como_vamos (Bash command failed. The command returned a non-zero exit code 1.; 395)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-28T04:08:15.546+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-28T04:08:15.645+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-01-28T04:08:15.649+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T04:08:15.674+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,10 @@
+icecream
+selenium
+pandas
+numpy
+pytest-shutil
+psycopg2
+sqlalchemy
+openpyxl
+requests
+python-json-logger

@@ -1,0 +1,6 @@
+**/.git
+**/.svn
+**/.hg
+**/.bzr
+**/.DS_Store
+**/node_modules

@@ -1,0 +1,327 @@
+[2025-01-28T06:47:46.787+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T06:47:46.806+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [queued]>
+[2025-01-28T06:47:46.815+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [queued]>
+[2025-01-28T06:47:46.817+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-01-28T06:47:46.833+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-28 06:41:36.610073+00:00
+[2025-01-28T06:47:46.839+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-28T06:41:36.610073+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpndpxd2ew']
+[2025-01-28T06:47:46.842+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask task_bot_como_vamos
+[2025-01-28T06:47:46.845+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=524) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-28T06:47:46.846+0000] {standard_task_runner.py:72} INFO - Started process 525 to run task
+[2025-01-28T06:47:46.932+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-28T06:41:36.610073+00:00 [running]> on host 08150d224bd2
+[2025-01-28T06:47:47.503+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T06:41:36.610073+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-28T06:41:36.610073+00:00'
+[2025-01-28T06:47:47.505+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T06:47:47.525+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-28T06:47:47.526+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-28T06:47:47.536+0000] {subprocess.py:99} INFO - Output:
+[2025-01-28T06:47:49.506+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '28/01/2025'
+[2025-01-28T06:47:49.509+0000] {subprocess.py:106} INFO - 2025-01-28 06:47:49,505 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-28T06:47:51.071+0000] {subprocess.py:106} INFO - 2025-01-28 06:47:51,070 - root - ERROR - Execution error: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 404. Message: invalid session id: session deleted as the browser has closed the connection
+[2025-01-28T06:47:51.085+0000] {subprocess.py:106} INFO - from disconnected: Unable to receive message from renderer
+[2025-01-28T06:47:51.087+0000] {subprocess.py:106} INFO -   (Session info: chrome=132.0.6834.110)
+[2025-01-28T06:47:51.089+0000] {subprocess.py:106} INFO - Host info: host: '55c85d6c8bc2', ip: '172.18.0.5'
+[2025-01-28T06:47:51.091+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:47:51.093+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:47:51.095+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:47:51.096+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:47:51.097+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:47:51.100+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:47:51.102+0000] {subprocess.py:106} INFO - Build info: version: '4.28.1', revision: '73f5ad48a2'
+[2025-01-28T06:47:51.104+0000] {subprocess.py:106} INFO - System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.10.4-linuxkit', java.version: '17.0.13'
+[2025-01-28T06:47:51.106+0000] {subprocess.py:106} INFO - Driver info: driver.version: unknown
+[2025-01-28T06:47:51.107+0000] {subprocess.py:106} INFO - Stacktrace:
+[2025-01-28T06:47:51.108+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:167)
+[2025-01-28T06:47:51.110+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:678)
+[2025-01-28T06:47:51.111+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:597)
+[2025-01-28T06:47:51.113+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:861)
+[2025-01-28T06:47:51.114+0000] {subprocess.py:106} INFO -     at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:818)
+[2025-01-28T06:47:51.116+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1136)
+[2025-01-28T06:47:51.117+0000] {subprocess.py:106} INFO -     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:635)
+[2025-01-28T06:47:51.119+0000] {subprocess.py:106} INFO -     at java.lang.Thread.run (Thread.java:840)
+[2025-01-28T06:47:51.169+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:47:51.171+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:47:51.173+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:47:56.174+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:47:56.177+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:47:56.179+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:01.182+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:01.185+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:01.187+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:06.185+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:06.187+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:06.189+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:11.189+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:11.192+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:11.194+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:16.190+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:16.191+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:16.193+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:21.192+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:21.193+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:21.194+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:26.195+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:26.197+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:26.198+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:31.198+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:31.199+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:31.200+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:36.201+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:36.204+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:36.206+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:41.205+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:41.207+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:41.209+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:46.207+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:46.210+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:46.211+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:51.210+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:51.211+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:51.212+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:48:56.214+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:48:56.216+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:48:56.218+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:01.215+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:01.217+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:01.218+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:06.219+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:06.221+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:06.222+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:11.221+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:11.223+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:11.224+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:16.224+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:16.225+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:16.227+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:21.228+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:21.234+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:21.235+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:26.231+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:26.233+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:26.235+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:31.234+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:31.236+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:31.238+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:36.235+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:36.237+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:36.239+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:41.237+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:41.240+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:41.241+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:46.241+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:46.243+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:46.244+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:51.243+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:51.245+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:51.246+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:49:56.246+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:49:56.249+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:49:56.250+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:01.248+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:01.250+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:01.251+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:06.250+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:06.252+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:06.252+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:11.252+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:11.254+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:11.255+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:16.254+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:16.256+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:16.257+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:21.256+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:21.258+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:21.259+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:26.258+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:26.260+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:26.261+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:31.260+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:31.262+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:31.263+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:36.265+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:36.267+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:36.268+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:41.267+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:41.268+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:41.269+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:46.270+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:46.272+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:46.273+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:51.272+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:51.273+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:51.275+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:50:56.275+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:50:56.277+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:50:56.279+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:01.276+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:01.278+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:01.279+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:06.278+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:06.280+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:06.281+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:11.281+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:11.282+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:11.283+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:16.293+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:16.295+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:16.296+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:21.296+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:21.300+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:21.301+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:26.299+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:26.303+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:26.305+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:31.303+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:31.306+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:31.308+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:36.308+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:36.310+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:36.312+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:41.309+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:41.311+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:41.312+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:46.311+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:46.312+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:46.313+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:51.312+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:51.314+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:51.315+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:51:56.364+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:51:56.372+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:51:56.381+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:01.546+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:01.626+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:01.712+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:06.781+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:52:06.876+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:06.967+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:07.058+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:12.025+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:52:12.098+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:12.305+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:12.411+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:20.383+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:52:21.607+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:21.982+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:22.801+0000] {job.py:229} INFO - Heartbeat recovered after 10.94 seconds
+[2025-01-28T06:52:23.288+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:26.958+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:52:31.882+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:37.533+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:42.403+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:52:48.714+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:52:56.050+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:52:56.166+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:52:56.410+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:53:01.081+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:53:01.093+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:53:01.095+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:53:01.097+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:53:01.241+0000] {job.py:229} INFO - Heartbeat recovered after 39.35 seconds
+[2025-01-28T06:53:06.304+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:53:06.383+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:53:06.442+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:53:06.508+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:53:13.747+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:53:15.464+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:53:17.764+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:53:20.416+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:53:30.465+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:53:37.869+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:53:41.466+0000] {job.py:229} INFO - Heartbeat recovered after 34.77 seconds
+[2025-01-28T06:53:43.485+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:53:47.181+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:53:50.418+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:53:54.754+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:05.244+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:17.988+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:21.156+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:21.826+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:22.023+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:22.451+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:26.999+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:27.098+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:27.169+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:27.186+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:27.222+0000] {job.py:229} INFO - Heartbeat recovered after 49.43 seconds
+[2025-01-28T06:54:32.006+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:32.011+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:32.014+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:32.016+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:37.010+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:37.015+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:37.017+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:37.018+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:42.024+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:42.025+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:42.026+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:42.028+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:47.026+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:47.028+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:47.030+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:47.031+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:52.706+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:52.716+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:52.718+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:52.719+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:54:58.260+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:54:58.385+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:54:58.433+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:54:58.445+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:03.300+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:55:03.354+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:55:03.356+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:55:03.358+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:08.335+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:55:08.339+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:55:08.340+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:55:08.341+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:13.463+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:55:13.572+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:55:13.741+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:55:13.839+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:18.506+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:55:18.510+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:55:18.512+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:55:18.514+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:23.540+0000] {subprocess.py:106} INFO - ic| file: '***tmpob5o4w1o'
+[2025-01-28T06:55:23.545+0000] {subprocess.py:106} INFO - ic| file: '***tmptz3g16e7'
+[2025-01-28T06:55:23.545+0000] {subprocess.py:106} INFO - ic| file: 'pymp-hmyjbm0g'
+[2025-01-28T06:55:23.546+0000] {subprocess.py:106} INFO - ic| file: 'hsperfdata_root'
+[2025-01-28T06:55:26.860+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-01-28T06:55:27.193+0000] {process_utils.py:132} INFO - Sending 15 to group 525. PIDs of all processes in the group: [532, 525]
+[2025-01-28T06:55:27.207+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 525
+[2025-01-28T06:55:27.215+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-28T06:55:27.222+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-01-28T06:55:27.501+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-28T06:55:27.651+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-28T06:41:36.610073+00:00, execution_date=20250128T064136, start_date=20250128T064746, end_date=20250128T065527
+[2025-01-28T06:55:27.911+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T06:55:28.012+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=525, status='terminated', exitcode=2, started='06:47:46') (525) terminated with exit code 2
+[2025-01-28T06:55:28.016+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=532, status='terminated', started='06:47:47') (532) terminated with exit code None
+[2025-01-28T06:55:28.020+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 143
+[2025-01-28T06:55:33.520+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-01-28T06:55:33.542+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T06:55:33.608+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,168 @@
+[2025-01-31T01:56:12.439+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T01:56:12.531+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T01:56:07.850232+00:00 [queued]>
+[2025-01-31T01:56:12.585+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T01:56:07.850232+00:00 [queued]>
+[2025-01-31T01:56:12.596+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-31T01:56:12.742+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_ex_bbva> on 2025-01-31 01:56:07.850232+00:00
+[2025-01-31T01:56:12.796+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=505) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T01:56:12.807+0000] {standard_task_runner.py:72} INFO - Started process 506 to run task
+[2025-01-31T01:56:12.813+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_ex_bbva', 'manual__2025-01-31T01:56:07.850232+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmplje5web0']
+[2025-01-31T01:56:12.822+0000] {standard_task_runner.py:105} INFO - Job 39: Subtask etl_ex_bbva
+[2025-01-31T01:56:13.043+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T01:56:07.850232+00:00 [running]> on host 09b63ee6c6d0
+[2025-01-31T01:56:13.382+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-01-31T01:56:07.850232+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-31T01:56:07.850232+00:00'
+[2025-01-31T01:56:13.388+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T01:56:13.454+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-31T01:56:13.457+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_ex_bbva.py']
+[2025-01-31T01:56:13.489+0000] {subprocess.py:99} INFO - Output:
+[2025-01-31T01:56:24.166+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T01:56:24.169+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T01:56:24.173+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T01:56:24.176+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T01:56:24.178+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T01:56:24.332+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T01:56:24.343+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T01:56:24.345+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T01:56:24.347+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T01:56:24.349+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T01:56:24.835+0000] {subprocess.py:106} INFO - 2025-01-31 01:56:24,834 - assets - INFO - Engine para base de datos: calidad_etl creado exitosamente
+[2025-01-31T01:56:24.853+0000] {subprocess.py:106} INFO - ic| fecha_inicio: datetime.date(2025, 1, 1)
+[2025-01-31T01:56:24.856+0000] {subprocess.py:106} INFO -     fecha_fin: datetime.date(2025, 1, 31)
+[2025-01-31T01:56:52.056+0000] {subprocess.py:106} INFO - 2025-01-31 01:56:52,054 - assets - INFO - SQL query succesfully executed
+[2025-01-31T01:59:52.092+0000] {subprocess.py:106} INFO - 2025-01-31 01:59:52,092 - etl_ex_bbva - INFO - Reporte como_vamos.xlsx successfully load
+[2025-01-31T01:59:52.383+0000] {subprocess.py:106} INFO - ic| df.columns: Index(['NIT', 'ID_CLIENTE_ONYX', 'NOMBRE_CLIENTE', 'ID_ATENCION_ONYX',
+[2025-01-31T01:59:52.385+0000] {subprocess.py:106} INFO -                        'ATENCION', 'PRIORIDAD_ATENCION', 'ESTADO_ATENCION', 'ORIGEN_ATENCION',
+[2025-01-31T01:59:52.386+0000] {subprocess.py:106} INFO -                        'DESCRIPCION', 'RESUMEN', 'RESOLUCION_1', 'RESOLUCION_2',
+[2025-01-31T01:59:52.388+0000] {subprocess.py:106} INFO -                        'RESOLUCION_3', 'RESOLUCION_4', 'USUARIO_INSERTADO', 'GRUPO_INSERTADO',
+[2025-01-31T01:59:52.389+0000] {subprocess.py:106} INFO -                        'USUARIO_ASIGNADO', 'GRUPO_ASIGNADO', 'USUARIO_SOLUCION',
+[2025-01-31T01:59:52.390+0000] {subprocess.py:106} INFO -                        'GRUPO_SOLUCION', 'USUARIO_CERRADO', 'GRUPO_CERRADO', 'ID_ENLACE',
+[2025-01-31T01:59:52.391+0000] {subprocess.py:106} INFO -                        'SERVICIO', 'PRODUCTO', 'FAMILIA', 'FECHA_CREACION',
+[2025-01-31T01:59:52.392+0000] {subprocess.py:106} INFO -                        'FECHA_INGRESO_ESTADO', 'DT_AJUSTADO', 'MAYOR_INCIDENT',
+[2025-01-31T01:59:52.393+0000] {subprocess.py:106} INFO -                        'GRUPO_OBJETIVO', 'SEGMENTO', 'CIUDAD', 'PALABRA_CLAVE',
+[2025-01-31T01:59:52.394+0000] {subprocess.py:106} INFO -                        'NIT_SIN_COD_Calc', 'SISTEMA_Calc', 'Consecutivo_Calc',
+[2025-01-31T01:59:52.396+0000] {subprocess.py:106} INFO -                        'Clasif_Por_Servicio_Calc', 'Clasif_Por_Cliente_Calc', 'SLA_Calc',
+[2025-01-31T01:59:52.397+0000] {subprocess.py:106} INFO -                        'Reclasificacion_atencion_Calc', 'Tiempo_Horas_SLA_Calc',
+[2025-01-31T01:59:52.398+0000] {subprocess.py:106} INFO -                        'Cumplimiento_Calc', 'Nueva_Prioridad_Calc', 'Meta_Individual_Calc',
+[2025-01-31T01:59:52.400+0000] {subprocess.py:106} INFO -                        'Meta_Presidencia_Calc', 'Meta_IFI_Calc', '3G_Calc', 'TMX_Minutos_Calc',
+[2025-01-31T01:59:52.401+0000] {subprocess.py:106} INFO -                        'TMX_Calc', 'Reincidencia_Calc', 'Recurrencia_Calc', 'RESPONSABILIDAD',
+[2025-01-31T01:59:52.403+0000] {subprocess.py:106} INFO -                        'LLAVE_GENERAL_Calc', 'LLAVE_Reincidencia_Calc',
+[2025-01-31T01:59:52.404+0000] {subprocess.py:106} INFO -                        'Reclasificacion_Reinc_Calc', 'FCR', 'Cluster_Actual_Calc',
+[2025-01-31T01:59:52.405+0000] {subprocess.py:106} INFO -                        'Celula_Comercial_Calc', 'Clasif_Por_IVR_Calc', 'TIPO TICKET',
+[2025-01-31T01:59:52.406+0000] {subprocess.py:106} INFO -                        'DT_CONCILIADO', 'CONTACTO DESTINO', 'TICKET_CARRIER', 'ALIAS ENLACE',
+[2025-01-31T01:59:52.408+0000] {subprocess.py:106} INFO -                        'FECHA_SOLUCION', 'TIEMPO INCIDENTE', 'RANGO HORA', 'TICKET_MAXIMO',
+[2025-01-31T01:59:52.409+0000] {subprocess.py:106} INFO -                        'REGIONAL', 'DIRECTOR', 'PN', 'G_SEGMENTO', 'G_Clasif_Por_IVR_Calc',
+[2025-01-31T01:59:52.410+0000] {subprocess.py:106} INFO -                        'NODO', 'Agrupacion_Especiales', 'Interno / Externo', 'VENDOR',
+[2025-01-31T01:59:52.412+0000] {subprocess.py:106} INFO -                        'Numero_CUN', 'TIPOSERVICIO', 'SUBTIPO', 'CASO RELACION', 'RELACION',
+[2025-01-31T01:59:52.413+0000] {subprocess.py:106} INFO -                        'INICIO INTERRUPCION', 'FIN INTERRUPCION', 'DOWNTIME_VENDOR',
+[2025-01-31T01:59:52.414+0000] {subprocess.py:106} INFO -                        'Autogestión', 'RESUELTO_SWAT', 'eyn_ofensor', 'eyn_problema',
+[2025-01-31T01:59:52.416+0000] {subprocess.py:106} INFO -                        'eyn_causa'],
+[2025-01-31T01:59:52.418+0000] {subprocess.py:106} INFO -                       dtype='object')
+[2025-01-31T01:59:52.700+0000] {subprocess.py:106} INFO - 2025-01-31 01:59:52,700 - etl_ex_bbva - ERROR - Execution error etl_ex_bbva.py: cannot assign without a target object
+[2025-01-31T01:59:52.701+0000] {subprocess.py:106} INFO - Conexión exitosa a la base de datos: calidad_etl
+[2025-01-31T01:59:52.703+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-31T01:59:52.704+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/etl_ex_bbva.py", line 141, in <module>
+[2025-01-31T01:59:52.711+0000] {subprocess.py:106} INFO -     main()
+[2025-01-31T01:59:52.713+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/etl_ex_bbva.py", line 137, in main
+[2025-01-31T01:59:52.719+0000] {subprocess.py:106} INFO -     raise e
+[2025-01-31T01:59:52.720+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/etl_ex_bbva.py", line 130, in main
+[2025-01-31T01:59:52.727+0000] {subprocess.py:106} INFO -     dataset = dataset.query("index = 9")
+[2025-01-31T01:59:52.728+0000] {subprocess.py:106} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.729+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4599, in query
+[2025-01-31T01:59:52.731+0000] {subprocess.py:106} INFO -     res = self.eval(expr, **kwargs)
+[2025-01-31T01:59:52.732+0000] {subprocess.py:106} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.733+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4725, in eval
+[2025-01-31T01:59:52.735+0000] {subprocess.py:106} INFO -     return _eval(expr, inplace=inplace, **kwargs)
+[2025-01-31T01:59:52.736+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.737+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/eval.py", line 336, in eval
+[2025-01-31T01:59:52.738+0000] {subprocess.py:106} INFO -     parsed_expr = Expr(expr, engine=engine, parser=parser, env=env)
+[2025-01-31T01:59:52.739+0000] {subprocess.py:106} INFO -                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.741+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 808, in __init__
+[2025-01-31T01:59:52.742+0000] {subprocess.py:106} INFO -     self.terms = self.parse()
+[2025-01-31T01:59:52.743+0000] {subprocess.py:106} INFO -                  ^^^^^^^^^^^^
+[2025-01-31T01:59:52.744+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 827, in parse
+[2025-01-31T01:59:52.746+0000] {subprocess.py:106} INFO -     return self._visitor.visit(self.expr)
+[2025-01-31T01:59:52.747+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.748+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 411, in visit
+[2025-01-31T01:59:52.750+0000] {subprocess.py:106} INFO -     return visitor(node, **kwargs)
+[2025-01-31T01:59:52.751+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.752+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 417, in visit_Module
+[2025-01-31T01:59:52.753+0000] {subprocess.py:106} INFO -     return self.visit(expr, **kwargs)
+[2025-01-31T01:59:52.755+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.756+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 411, in visit
+[2025-01-31T01:59:52.757+0000] {subprocess.py:106} INFO -     return visitor(node, **kwargs)
+[2025-01-31T01:59:52.758+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-31T01:59:52.760+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/computation/expr.py", line 621, in visit_Assign
+[2025-01-31T01:59:52.761+0000] {subprocess.py:106} INFO -     raise ValueError("cannot assign without a target object")
+[2025-01-31T01:59:52.762+0000] {subprocess.py:106} INFO - ValueError: cannot assign without a target object
+[2025-01-31T01:59:53.491+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-01-31T01:59:53.517+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-31T01:59:53.528+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reporte_como_vamos, task_id=etl_ex_bbva, run_id=manual__2025-01-31T01:56:07.850232+00:00, execution_date=20250131T015607, start_date=20250131T015612, end_date=20250131T015953
+[2025-01-31T01:59:53.572+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T01:59:53.574+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 39 for task etl_ex_bbva (Bash command failed. The command returned a non-zero exit code 1.; 506)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-31T01:59:53.592+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-31T01:59:53.618+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-31T01:59:53.622+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

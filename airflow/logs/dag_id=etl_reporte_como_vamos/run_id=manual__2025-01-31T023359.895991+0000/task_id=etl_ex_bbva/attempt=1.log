@@ -1,0 +1,45 @@
+[2025-01-31T02:34:02.044+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T02:34:02.084+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:33:59.895991+00:00 [queued]>
+[2025-01-31T02:34:02.105+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:33:59.895991+00:00 [queued]>
+[2025-01-31T02:34:02.106+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-31T02:34:02.139+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_ex_bbva> on 2025-01-31 02:33:59.895991+00:00
+[2025-01-31T02:34:02.152+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=941) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T02:34:02.156+0000] {standard_task_runner.py:72} INFO - Started process 942 to run task
+[2025-01-31T02:34:02.157+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_ex_bbva', 'manual__2025-01-31T02:33:59.895991+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmp832rc13f']
+[2025-01-31T02:34:02.161+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask etl_ex_bbva
+[2025-01-31T02:34:02.272+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-31T02:33:59.895991+00:00 [running]> on host 09b63ee6c6d0
+[2025-01-31T02:34:02.483+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-01-31T02:33:59.895991+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-31T02:33:59.895991+00:00'
+[2025-01-31T02:34:02.486+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T02:34:02.526+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-31T02:34:02.528+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_ex_bbva.py']
+[2025-01-31T02:34:02.553+0000] {subprocess.py:99} INFO - Output:
+[2025-01-31T02:34:08.961+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T02:34:08.962+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T02:34:08.964+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T02:34:08.966+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T02:34:08.967+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T02:34:09.047+0000] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-01-31T02:34:09.050+0000] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-01-31T02:34:09.052+0000] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-01-31T02:34:09.054+0000] {subprocess.py:106} INFO -              'port': '3306',
+[2025-01-31T02:34:09.056+0000] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-01-31T02:34:09.418+0000] {subprocess.py:106} INFO - 2025-01-31 02:34:09,418 - assets - INFO - Engine para base de datos: calidad_etl creado exitosamente
+[2025-01-31T02:34:09.425+0000] {subprocess.py:106} INFO - ic| fecha_inicio: datetime.date(2025, 1, 1)
+[2025-01-31T02:34:09.426+0000] {subprocess.py:106} INFO -     fecha_fin: datetime.date(2025, 1, 31)
+[2025-01-31T02:34:37.024+0000] {subprocess.py:106} INFO - 2025-01-31 02:34:37,023 - assets - INFO - SQL query succesfully executed
+[2025-01-31T02:38:40.198+0000] {subprocess.py:106} INFO - 2025-01-31 02:38:40,197 - etl_ex_bbva - INFO - Reporte como_vamos.xlsx successfully load
+[2025-01-31T02:38:40.596+0000] {subprocess.py:106} INFO - ic| dataset.ID_ATENCION_ONYX: 9    IM3009381
+[2025-01-31T02:38:40.598+0000] {subprocess.py:106} INFO -                               Name: ID_ATENCION_ONYX, dtype: object
+[2025-01-31T02:38:41.198+0000] {subprocess.py:106} INFO - 2025-01-31 02:38:41,197 - etl_ex_bbva - ERROR - Execution error etl_ex_bbva.py: (MySQLdb.OperationalError) (1054, "Unknown column 'NOMBRE_CLIENTE' in 'field list'")
+[2025-01-31T02:38:41.199+0000] {subprocess.py:106} INFO - [SQL: INSERT INTO calidad_etl.fact_sm_cerrado (`NIT`, `ID_CLIENTE_ONYX`, `NOMBRE_CLIENTE`, `ID_ATENCION_ONYX`, `ATENCION`, `PRIORIDAD_ATENCION`, `ESTADO_ATENCION`, `ORIGEN_ATENCION`, `DESCRIPCION`, `RESUMEN`, `RESOLUCION_1`, `RESOLUCION_2`, `RESOLUCION_3`, `RESOLUCION_4`, `USUARIO_INSERTADO`, `GRUPO_INSERTADO`, `USUARIO_ASIGNADO`, `GRUPO_ASIGNADO`, `USUARIO_SOLUCION`, `GRUPO_SOLUCION`, `USUARIO_CERRADO`, `GRUPO_CERRADO`, `ID_ENLACE`, `SERVICIO`, `PRODUCTO`, `FAMILIA`, `FECHA_CREACION`, `FECHA_INGRESO_ESTADO`, `DT_AJUSTADO`, `MAYOR_INCIDENT`, `GRUPO_OBJETIVO`, `SEGMENTO`, `CIUDAD`, `PALABRA_CLAVE`, `NIT_SIN_COD_Calc`, `SISTEMA_Calc`, `Consecutivo_Calc`, `Clasif_Por_Servicio_Calc`, `Clasif_Por_Cliente_Calc`, `SLA_Calc`, `Reclasificacion_atencion_Calc`, `Tiempo_Horas_SLA_Calc`, `Cumplimiento_Calc`, `Nueva_Prioridad_Calc`, `Meta_Individual_Calc`, `Meta_Presidencia_Calc`, `Meta_IFI_Calc`, `3G_Calc`, `TMX_Minutos_Calc`, `TMX_Calc`, `Reincidencia_Calc`, `Recurrencia_Calc`, `RESPONSABILIDAD`, `LLAVE_GENERAL_Calc`, `LLAVE_Reincidencia_Calc`, `Reclasificacion_Reinc_Calc`, `FCR`, `Cluster_Actual_Calc`, `Celula_Comercial_Calc`, `Clasif_Por_IVR_Calc`, `TIPO TICKET`, `DT_CONCILIADO`, `CONTACTO DESTINO`, `TICKET_CARRIER`, `ALIAS ENLACE`, `FECHA_SOLUCION`, `TIEMPO INCIDENTE`, `RANGO HORA`, `TICKET_MAXIMO`, `REGIONAL`, `DIRECTOR`, `PN`, `G_SEGMENTO`, `G_Clasif_Por_IVR_Calc`, `NODO`, `Agrupacion_Especiales`, `Interno / Externo`, `VENDOR`, `Numero_CUN`, `TIPOSERVICIO`, `SUBTIPO`, `CASO RELACION`, `RELACION`, `INICIO INTERRUPCION`, `FIN INTERRUPCION`, `DOWNTIME_VENDOR`, `Autogestión`, `RESUELTO_SWAT`, eyn_ofensor, eyn_problema, eyn_causa) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[2025-01-31T02:38:41.201+0000] {subprocess.py:106} INFO - [parameters: ('860032330-3', 11231651, 'TUYA S.A', 'IM3009381', 'Incident', '3 - Average', 'Closed', '1 - Usuario', 'intermitencia Switch Tuya Venecia', None, 'incident', 'failure', 'Conectividad Limitada', 'CR - Hardware - Dañado (Claro)', 'ECM3561S', 'EYN - NOC LANWLAN Back\nEYN - NOC LANWLAN Front\nEYN - NOC LANWLAN Remoto', 'Antonio Ernesto Martinez', 'EYN - NOC LANWLAN Back', 46184067, 'EYN - NOC LANWLAN Back', 'Mario Esteban Rodriguez Cuy', 'EYN - NOC LANWLAN Back', 'CDM1055', 'Empresas – Soluciones Administradas', 'LAN/WAN ADMINISTRADA', 'Diagnosed Successfully', '2025-01-14 18:25:29', '2025-01-21 12:30:13', 0.1503, None, None, 'ESTRATEGICA', 'Bogotá', 'CDM1055', None, 'SM', None, 'Empresas', 'ITS', 12.0, 'Incidente', 0.1503, 'Cumple', 'Prioridad 3', None, None, None, None, None, None, 'NO', 'NO', 'Cliente', 'IM3009381CDM1055', 'CDM1055incidentfailureConectividad LimitadaCR - Hardware - Dañado (Claro)', 'Incidente', 'Cumple', None, None, 'ITS - TUYA', None, 133.5814, 70879413, None, None, '2025-01-21 12:28:08', None, None, None, 'R4. CENTRO', 'Carlos Mario Guevara', '1er nivel', 'Empresas', 'EMP NOC REMOTO', 'probsol', None, 'Externo', None, None, None, 'LAN/WAN ADMINISTRADA', None, 'SIN RELACION', '2025-01-14 18:25:07', '2025-01-20 08:00:00', 134.0, None, '2025-01-30 06:08:34', 'Equipo Remoto', 'Hardware', 'Desconectado/mal conectado')]
+[2025-01-31T02:38:41.204+0000] {subprocess.py:106} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-01-31T02:38:41.206+0000] {subprocess.py:106} INFO - Conexión exitosa a la base de datos: calidad_etl
+[2025-01-31T02:38:43.226+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-31T02:38:43.293+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T02:38:43.295+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=etl_ex_bbva, run_id=manual__2025-01-31T02:33:59.895991+00:00, execution_date=20250131T023359, start_date=20250131T023402, end_date=20250131T023843
+[2025-01-31T02:38:43.346+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-31T02:38:43.381+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-31T02:38:43.386+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

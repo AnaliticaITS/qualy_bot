@@ -1,0 +1,7 @@
+.env
+/envs
+.txt
+.log
+.json
+Pipfile
+Pipfile.lock

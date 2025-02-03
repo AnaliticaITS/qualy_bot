@@ -1,0 +1,36 @@
+[2025-01-30T17:32:25.637+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T17:32:25.715+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T17:32:22.389834+00:00 [queued]>
+[2025-01-30T17:32:25.781+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T17:32:22.389834+00:00 [queued]>
+[2025-01-30T17:32:25.783+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T17:32:25.846+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_bot_como_vamos> on 2025-01-30 17:32:22.389834+00:00
+[2025-01-30T17:32:25.862+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1081) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T17:32:25.870+0000] {standard_task_runner.py:72} INFO - Started process 1082 to run task
+[2025-01-30T17:32:25.873+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'task_bot_como_vamos', 'manual__2025-01-30T17:32:22.389834+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmp39m84h93']
+[2025-01-30T17:32:25.878+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask task_bot_como_vamos
+[2025-01-30T17:32:26.057+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.task_bot_como_vamos manual__2025-01-30T17:32:22.389834+00:00 [running]> on host f34597614f96
+[2025-01-30T17:32:26.389+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='task_bot_como_vamos' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T17:32:22.389834+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T17:32:22.389834+00:00'
+[2025-01-30T17:32:26.392+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T17:32:26.444+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T17:32:26.447+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_reporte_como_vamos.py']
+[2025-01-30T17:32:26.478+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T17:32:32.418+0000] {subprocess.py:106} INFO - ic| start_date: '01/01/2025', end_date: '30/01/2025'
+[2025-01-30T17:32:32.421+0000] {subprocess.py:106} INFO - 2025-01-30 17:32:32,419 - bot_como_vamos - INFO - Starting script bot_como_vamos.py
+[2025-01-30T17:32:33.377+0000] {subprocess.py:106} INFO - 2025-01-30 17:32:33,376 - bot_como_vamos - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-01-30T17:33:09.244+0000] {subprocess.py:106} INFO - ic| login_success: <selenium.webdriver.remote.webelement.WebElement (session="514eebec67bb45559499454e7b8e9a19", element="f.E78A0AC6F6B8893BC28D7834A1DEDB51.d.469A4553E21A7744F3574F7C1D798D0B.e.78")>
+[2025-01-30T17:33:09.247+0000] {subprocess.py:106} INFO - 2025-01-30 17:33:09,244 - bot_como_vamos - INFO - Loging success
+[2025-01-30T17:33:19.360+0000] {subprocess.py:106} INFO - 2025-01-30 17:33:19,360 - bot_como_vamos - INFO - Click in menu button successfully
+[2025-01-30T17:33:29.714+0000] {subprocess.py:106} INFO - 2025-01-30 17:33:29,714 - bot_como_vamos - INFO - Input dates successfully
+[2025-01-30T17:33:39.868+0000] {subprocess.py:106} INFO - 2025-01-30 17:33:39,868 - bot_como_vamos - INFO - Click in 'Empresas Y Negocios' successfully
+[2025-01-30T17:36:49.887+0000] {subprocess.py:106} INFO - 2025-01-30 17:36:49,887 - bot_como_vamos - INFO - Click in 'Como Vamos' successfully
+[2025-01-30T17:36:49.890+0000] {subprocess.py:106} INFO - 2025-01-30 17:36:49,887 - assets - INFO - Waiting for download file...............
+[2025-01-30T17:36:49.925+0000] {subprocess.py:106} INFO - ic| file: 'Reporte como_vamos.xlsx'
+[2025-01-30T17:36:49.933+0000] {subprocess.py:106} INFO - ic| downloaded_file: True
+[2025-01-30T17:36:49.934+0000] {subprocess.py:106} INFO - 2025-01-30 17:36:49,933 - bot_como_vamos - INFO - Download Reporte como_vamos succesfully
+[2025-01-30T17:36:50.087+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-30T17:36:50.141+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T17:36:50.143+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=task_bot_como_vamos, run_id=manual__2025-01-30T17:32:22.389834+00:00, execution_date=20250130T173222, start_date=20250130T173225, end_date=20250130T173650
+[2025-01-30T17:36:50.176+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T17:36:50.213+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T17:36:50.217+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

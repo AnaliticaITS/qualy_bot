@@ -1,0 +1,135 @@
+[2025-01-24T14:49:47.633+0000] {processor.py:186} INFO - Started process (PID=67) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:47.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:49:47.651+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:49:47.650+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:48.122+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:49:48.075+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:49:48.125+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:48.190+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.583 seconds
+[2025-01-24T14:49:58.449+0000] {processor.py:186} INFO - Started process (PID=68) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:58.452+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:49:58.458+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:49:58.458+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:58.534+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:49:58.513+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:49:58.536+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:49:58.567+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.130 seconds
+[2025-01-24T14:50:08.731+0000] {processor.py:186} INFO - Started process (PID=75) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:08.733+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:50:08.737+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:08.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:08.790+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:08.777+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:50:08.791+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:08.813+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.088 seconds
+[2025-01-24T14:50:19.093+0000] {processor.py:186} INFO - Started process (PID=76) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:19.098+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:50:19.108+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:19.107+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:19.266+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:19.202+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:50:19.271+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:19.348+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.271 seconds
+[2025-01-24T14:50:29.534+0000] {processor.py:186} INFO - Started process (PID=77) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:29.536+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:50:29.539+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:29.538+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:29.586+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:29.572+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:50:29.587+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:29.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.079 seconds
+[2025-01-24T14:50:40.059+0000] {processor.py:186} INFO - Started process (PID=84) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:40.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:50:40.079+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:40.077+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:40.244+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:40.200+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:50:40.252+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:40.347+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.315 seconds
+[2025-01-24T14:50:50.574+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:50.576+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:50:50.579+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:50.579+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:50.624+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:50:50.612+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:50:50.626+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:50:50.647+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.079 seconds
+[2025-01-24T14:51:01.121+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:01.126+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:51:01.139+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:51:01.138+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:01.382+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:51:01.319+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:51:01.388+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:01.512+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.416 seconds
+[2025-01-24T14:51:11.919+0000] {processor.py:186} INFO - Started process (PID=93) to work on /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:11.924+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/download_como_vamos_dag.py for tasks to queue
+[2025-01-24T14:51:11.934+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:51:11.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:12.084+0000] {logging_mixin.py:190} INFO - [2025-01-24T14:51:12.050+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/download_como_vamos_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/download_como_vamos_dag.py", line 15, in <module>
+    with DAG(
+         ^^^^
+TypeError: DAG.__init__() got an unexpected keyword argument 'shedule_interval'
+[2025-01-24T14:51:12.092+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/download_como_vamos_dag.py
+[2025-01-24T14:51:12.172+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/download_como_vamos_dag.py took 0.273 seconds

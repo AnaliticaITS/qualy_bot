@@ -1,0 +1,117 @@
+[2025-01-30T23:36:08.587+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T23:36:08.660+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-30T23:36:04.957282+00:00 [queued]>
+[2025-01-30T23:36:08.704+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-30T23:36:04.957282+00:00 [queued]>
+[2025-01-30T23:36:08.708+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T23:36:08.781+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_ex_bbva> on 2025-01-30 23:36:04.957282+00:00
+[2025-01-30T23:36:08.799+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4403) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T23:36:08.808+0000] {standard_task_runner.py:72} INFO - Started process 4404 to run task
+[2025-01-30T23:36:08.806+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_ex_bbva', 'manual__2025-01-30T23:36:04.957282+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpm42bhzz_']
+[2025-01-30T23:36:08.814+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask etl_ex_bbva
+[2025-01-30T23:36:09.002+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_ex_bbva manual__2025-01-30T23:36:04.957282+00:00 [running]> on host f34597614f96
+[2025-01-30T23:36:09.549+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T23:36:04.957282+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T23:36:04.957282+00:00'
+[2025-01-30T23:36:09.560+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T23:36:09.812+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-30T23:36:09.823+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_ex_bbva.py']
+[2025-01-30T23:36:09.903+0000] {subprocess.py:99} INFO - Output:
+[2025-01-30T23:36:16.947+0000] {subprocess.py:106} INFO - ic| params: {'database': None, 'host': None, 'password': None, 'port': None, 'user': None}
+[2025-01-30T23:36:17.028+0000] {subprocess.py:106} INFO - ic| params: {'database': None, 'host': None, 'password': None, 'port': None, 'user': None}
+[2025-01-30T23:36:17.029+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-30T23:36:17.030+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/assets/assets.py", line 87, in conexion_db
+[2025-01-30T23:36:17.039+0000] {subprocess.py:106} INFO -     conexion = mysql.connector.connect(
+[2025-01-30T23:36:17.041+0000] {subprocess.py:106} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T23:36:17.042+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mysql/connector/pooling.py", line 322, in connect
+[2025-01-30T23:36:17.043+0000] {subprocess.py:106} INFO -     return CMySQLConnection(*args, **kwargs)
+[2025-01-30T23:36:17.045+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T23:36:17.046+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 151, in __init__
+[2025-01-30T23:36:17.048+0000] {subprocess.py:106} INFO -     self.connect(**kwargs)
+[2025-01-30T23:36:17.049+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mysql/connector/abstracts.py", line 1423, in connect
+[2025-01-30T23:36:17.050+0000] {subprocess.py:106} INFO -     self.config(**kwargs)
+[2025-01-30T23:36:17.052+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mysql/connector/abstracts.py", line 693, in config
+[2025-01-30T23:36:17.053+0000] {subprocess.py:106} INFO -     self._port = int(config["port"])
+[2025-01-30T23:36:17.055+0000] {subprocess.py:106} INFO -                  ^^^^^^^^^^^^^^^^^^^
+[2025-01-30T23:36:17.057+0000] {subprocess.py:106} INFO - TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+[2025-01-30T23:36:17.059+0000] {subprocess.py:106} INFO - 
+[2025-01-30T23:36:17.060+0000] {subprocess.py:106} INFO - During handling of the above exception, another exception occurred:
+[2025-01-30T23:36:17.062+0000] {subprocess.py:106} INFO - 
+[2025-01-30T23:36:17.063+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-01-30T23:36:17.064+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/etl_ex_bbva.py", line 29, in <module>
+[2025-01-30T23:36:17.066+0000] {subprocess.py:106} INFO -     conn = conexion_db(params=params, type='mysql')
+[2025-01-30T23:36:17.067+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-30T23:36:17.069+0000] {subprocess.py:106} INFO -   File "/opt/***/scripts/assets/assets.py", line 101, in conexion_db
+[2025-01-30T23:36:17.071+0000] {subprocess.py:106} INFO -     error_type = type(e).__name__
+[2025-01-30T23:36:17.072+0000] {subprocess.py:106} INFO -                  ^^^^^^^
+[2025-01-30T23:36:17.074+0000] {subprocess.py:106} INFO - TypeError: 'str' object is not callable
+[2025-01-30T23:36:17.381+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-01-30T23:36:17.406+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-30T23:36:17.417+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=etl_reporte_como_vamos, task_id=etl_ex_bbva, run_id=manual__2025-01-30T23:36:04.957282+00:00, execution_date=20250130T233604, start_date=20250130T233608, end_date=20250130T233617
+[2025-01-30T23:36:17.449+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T23:36:17.451+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 29 for task etl_ex_bbva (Bash command failed. The command returned a non-zero exit code 1.; 4404)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-30T23:36:17.478+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-30T23:36:17.511+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T23:36:17.517+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
