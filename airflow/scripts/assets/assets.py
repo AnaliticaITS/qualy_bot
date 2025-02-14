@@ -35,7 +35,7 @@ def obtener_fechas():
     hoy = datetime.date.today()
     fecha_inicio = hoy.replace(day=1)
     ic(hoy, fecha_inicio)
-    # fecha_fin = hoy.replace(day=1) - datetime.timedelta(days=1) ## Fecha del ultimo dia del mes anterior
+    # fecha_fin = fecha_inicio - datetime.timedelta(days=1) ## Fecha del ultimo dia del mes anterior
     return fecha_inicio, hoy
 
 

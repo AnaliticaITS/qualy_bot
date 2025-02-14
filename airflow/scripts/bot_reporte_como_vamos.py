@@ -28,10 +28,10 @@ username_reporting = os.getenv("USERNAME_REPORTING")
 password_reporting = os.getenv("PASSWORD_REPORTING")
 
 # Get dates
-hoy = datetime.date.today()
-date = hoy - datetime.timedelta(days=1)
-report_date = date.strftime("%d/%m/%Y")
-ic(report_date)
+month_first_day, today = ast.obtener_fechas() 
+first_date = month_first_day.strftime("%d/%m/%Y")
+last_date = today.strftime("%d/%m/%Y")
+ic(first_date)
 download_dir = os.getenv("DOWNLOAD_DIR")
 
 
@@ -116,8 +116,8 @@ def main():
         fecha_fin = wait.until(EC.presence_of_element_located((By.ID, "fecha_fin")))        
         
         # Input dates
-        fecha_inicio.send_keys(report_date)
-        fecha_fin.send_keys(report_date)
+        fecha_inicio.send_keys(first_date)
+        fecha_fin.send_keys(last_date)
         logger.info("Input dates successfully")
         time.sleep(10)        
         

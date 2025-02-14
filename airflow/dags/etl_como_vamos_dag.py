@@ -46,7 +46,7 @@ with DAG(
     dag_id = 'etl_reporte_como_vamos',
     default_args = default_args,
     description = 'DAG that executes the python ETL to download Reporte como_vamos.xlsx',
-    schedule_interval = '30 6 * * *',
+    schedule_interval = '0 7 * * *',
     catchup = False, # Indispensable False si se usa 'start_date: days_ago(1)'
 ) as dag:
     
