@@ -345,6 +345,7 @@ def main():
             data_incidentes_eventos = cruzar_casos(data_incidentes_eventos, IMsMesEnCurso)
             data_requerimientos = cruzar_casos(data_requerimientos, RFsMesEnCurso)
             data_cambios = cruzar_casos(data_cambios, CsMesEnCurso)
+            texto = ""
 
             # CARGAR DATAS A BD
             c_SQL_POSTGRESQL = enginePG.connect()

@@ -1,4 +1,5 @@
 import assets.assets as ast
+import datetime
 import os
 import time
 import logging
@@ -27,10 +28,10 @@ username_reporting = os.getenv("USERNAME_REPORTING")
 password_reporting = os.getenv("PASSWORD_REPORTING")
 
 # Get dates
-start, end = ast.obtener_fechas()
-start_date = start.strftime("%d/%m/%Y")
-end_date = end.strftime("%d/%m/%Y")
-ic(start_date, end_date)
+hoy = datetime.date.today()
+date = hoy - datetime.timedelta(days=1)
+report_date = date.strftime("%d/%m/%Y")
+ic(report_date)
 download_dir = os.getenv("DOWNLOAD_DIR")
 
 
@@ -115,8 +116,8 @@ def main():
         fecha_fin = wait.until(EC.presence_of_element_located((By.ID, "fecha_fin")))        
         
         # Input dates
-        fecha_inicio.send_keys(start_date)
-        fecha_fin.send_keys(end_date)
+        fecha_inicio.send_keys(report_date)
+        fecha_fin.send_keys(report_date)
         logger.info("Input dates successfully")
         time.sleep(10)        
         

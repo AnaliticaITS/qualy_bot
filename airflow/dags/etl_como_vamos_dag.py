@@ -1,6 +1,7 @@
 import os
 import subprocess
 import logging
+import pendulum
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
@@ -35,7 +36,7 @@ default_args = {
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
-    'start_date': days_ago(1),
+    'start_date':pendulum.datetime(2025, 2, 5, tz="America/Bogota"),  # Usa Bogotá como zona horaria,
     'retries': 3,
     'retry_delay': timedelta(minutes=5),
     
@@ -46,7 +47,7 @@ with DAG(
     default_args = default_args,
     description = 'DAG that executes the python ETL to download Reporte como_vamos.xlsx',
     schedule_interval = '30 6 * * *',
-    catchup = False,
+    catchup = False, # Indispensable False si se usa 'start_date: days_ago(1)'
 ) as dag:
     
     # Task 1

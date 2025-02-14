@@ -1,0 +1,42 @@
+[2025-02-05T01:31:37.840-0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T01:31:37.866-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_cdc scheduled__2025-02-04T06:30:00+00:00 [queued]>
+[2025-02-05T01:31:37.889-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_cdc scheduled__2025-02-04T06:30:00+00:00 [queued]>
+[2025-02-05T01:31:37.891-0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2025-02-05T01:31:37.908-0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_cdc> on 2025-02-04 06:30:00+00:00
+[2025-02-05T01:31:37.915-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=39768) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T01:31:37.920-0500] {standard_task_runner.py:72} INFO - Started process 39769 to run task
+[2025-02-05T01:31:37.919-0500] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_cdc', 'scheduled__2025-02-04T06:30:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpagnvrfpy']
+[2025-02-05T01:31:37.921-0500] {standard_task_runner.py:105} INFO - Job 45: Subtask etl_cdc
+[2025-02-05T01:31:38.005-0500] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_cdc scheduled__2025-02-04T06:30:00+00:00 [running]> on host 21f1c1b48730
+[2025-02-05T01:31:38.125-0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_cdc' AIRFLOW_CTX_EXECUTION_DATE='2025-02-04T06:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-04T06:30:00+00:00'
+[2025-02-05T01:31:38.127-0500] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T01:31:38.151-0500] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-05T01:31:38.153-0500] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_cdc.py']
+[2025-02-05T01:31:38.167-0500] {subprocess.py:99} INFO - Output:
+[2025-02-05T01:31:41.660-0500] {subprocess.py:106} INFO -      incrementador               nombre_cliente  ... duplicado motivo_duplicado
+[2025-02-05T01:31:41.661-0500] {subprocess.py:106} INFO - 0            11214  COLOMBIANA DE COMERCIO S.A.  ...
+[2025-02-05T01:31:41.661-0500] {subprocess.py:106} INFO - 1            11115  COLOMBIANA DE COMERCIO S.A.  ...
+[2025-02-05T01:31:41.662-0500] {subprocess.py:106} INFO - 2            11116  COLOMBIANA DE COMERCIO S.A.  ...
+[2025-02-05T01:31:41.663-0500] {subprocess.py:106} INFO - 3            11117  COLOMBIANA DE COMERCIO S.A.  ...
+[2025-02-05T01:31:41.663-0500] {subprocess.py:106} INFO - 4            11118  COLOMBIANA DE COMERCIO S.A.  ...
+[2025-02-05T01:31:41.664-0500] {subprocess.py:106} INFO - ..             ...                          ...  ...       ...              ...
+[2025-02-05T01:31:41.664-0500] {subprocess.py:106} INFO - 224          11365  COLOMBIANA DE COMERCIO S.A.  ...                       None
+[2025-02-05T01:31:41.665-0500] {subprocess.py:106} INFO - 225          11366  COLOMBIANA DE COMERCIO S.A.  ...                       None
+[2025-02-05T01:31:41.665-0500] {subprocess.py:106} INFO - 226          11367  COLOMBIANA DE COMERCIO S.A.  ...                       None
+[2025-02-05T01:31:41.666-0500] {subprocess.py:106} INFO - 227          11368  COLOMBIANA DE COMERCIO S.A.  ...                       None
+[2025-02-05T01:31:41.666-0500] {subprocess.py:106} INFO - 228          11369  COLOMBIANA DE COMERCIO S.A.  ...                       None
+[2025-02-05T01:31:41.667-0500] {subprocess.py:106} INFO - 
+[2025-02-05T01:31:41.667-0500] {subprocess.py:106} INFO - [229 rows x 60 columns]
+[2025-02-05T01:31:41.667-0500] {subprocess.py:106} INFO - Empty DataFrame
+[2025-02-05T01:31:41.668-0500] {subprocess.py:106} INFO - Columns: [nombre_cliente, id_caso, tipo_caso_sm, prioridad_sm, estado_atencion, origen_atencion, titulo, categoria_tipo_caso, subcategoria_falla, area_problema_falla, km_causa_falla, usuario_creacion, grupo_creacion, usuario_asignado, grupo_asignado, usuario_solucion, grupo_solucion, usuario_cerrado, grupo_cerrado, id_enlace, servicio, producto, codigo_cierre, fecha_creacion, fecha_cierre, tiempo_sla_dt_ajust, segmento, ciudad, sla_calc, tipo_caso_claro, tiempo_sla_calculado, cumplimiento_sla_claro, prioridad_claro, responsabilidad, fcr, tiempo_interrupcion_dt_concil, ticket_carrier, fecha_solucion, ticket_maximo, regional, pn, interno_externo, vendor, numero_cun, subtipo, caso_relacion, relacion, inicio_interrupcion, fin_interrupcion, downtime_vendor, autogestion, fecha_cargue, cumplimiento_reto, ofensor, problema, causa, presenta_interrupcion_ci, duplicado, motivo_duplicado]
+[2025-02-05T01:31:41.669-0500] {subprocess.py:106} INFO - Index: []
+[2025-02-05T01:31:41.669-0500] {subprocess.py:106} INFO - 0 0 0
+[2025-02-05T01:31:41.670-0500] {subprocess.py:106} INFO - Ejecucion Exitosa
+[2025-02-05T01:31:41.855-0500] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-05T01:31:41.887-0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T01:31:41.888-0500] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=etl_cdc, run_id=scheduled__2025-02-04T06:30:00+00:00, execution_date=20250204T063000, start_date=20250205T063137, end_date=20250205T063141
+[2025-02-05T01:31:41.918-0500] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T01:31:41.943-0500] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T01:31:41.947-0500] {local_task_job_runner.py:245} INFO - ::endgroup::

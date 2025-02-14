@@ -1,0 +1,47 @@
+[2025-02-11T06:32:13.487-0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-11T06:32:13.507-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva scheduled__2025-02-10T11:30:00+00:00 [queued]>
+[2025-02-11T06:32:13.518-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.etl_ex_bbva scheduled__2025-02-10T11:30:00+00:00 [queued]>
+[2025-02-11T06:32:13.519-0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2025-02-11T06:32:13.535-0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): etl_ex_bbva> on 2025-02-10 11:30:00+00:00
+[2025-02-11T06:32:13.543-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=7683) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-11T06:32:13.545-0500] {standard_task_runner.py:72} INFO - Started process 7686 to run task
+[2025-02-11T06:32:13.546-0500] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'etl_ex_bbva', 'scheduled__2025-02-10T11:30:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmp81itrkxz']
+[2025-02-11T06:32:13.547-0500] {standard_task_runner.py:105} INFO - Job 96: Subtask etl_ex_bbva
+[2025-02-11T06:32:13.613-0500] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.etl_ex_bbva scheduled__2025-02-10T11:30:00+00:00 [running]> on host 21f1c1b48730
+[2025-02-11T06:32:13.735-0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='etl_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-02-10T11:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-10T11:30:00+00:00'
+[2025-02-11T06:32:13.737-0500] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-11T06:32:13.763-0500] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-11T06:32:13.765-0500] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/etl_ex_bbva.py']
+[2025-02-11T06:32:13.778-0500] {subprocess.py:99} INFO - Output:
+[2025-02-11T06:32:17.044-0500] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-02-11T06:32:17.046-0500] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-02-11T06:32:17.047-0500] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-02-11T06:32:17.047-0500] {subprocess.py:106} INFO -              'port': '3306',
+[2025-02-11T06:32:17.048-0500] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-02-11T06:32:17.084-0500] {subprocess.py:106} INFO - ic| params: {'database': 'calidad_etl',
+[2025-02-11T06:32:17.085-0500] {subprocess.py:106} INFO -              'host': '172.29.33.204',
+[2025-02-11T06:32:17.085-0500] {subprocess.py:106} INFO -              'password': 'calidad2021*',
+[2025-02-11T06:32:17.086-0500] {subprocess.py:106} INFO -              'port': '3306',
+[2025-02-11T06:32:17.086-0500] {subprocess.py:106} INFO -              'user': 'calidad_etl'}
+[2025-02-11T06:32:17.720-0500] {subprocess.py:106} INFO - 2025-02-11 06:32:17,719 - assets - INFO - Engine para base de datos: calidad_etl creado exitosamente
+[2025-02-11T06:32:17.724-0500] {subprocess.py:106} INFO - ic| hoy: datetime.date(2025, 2, 11)
+[2025-02-11T06:32:17.725-0500] {subprocess.py:106} INFO -     fecha_inicio: datetime.date(2025, 2, 1)
+[2025-02-11T06:32:17.728-0500] {subprocess.py:106} INFO - ic| fecha_inicio: datetime.date(2025, 2, 1)
+[2025-02-11T06:32:17.729-0500] {subprocess.py:106} INFO -     fecha_fin: datetime.date(2025, 2, 11)
+[2025-02-11T06:32:17.732-0500] {subprocess.py:106} INFO - ic| query: '
+[2025-02-11T06:32:17.733-0500] {subprocess.py:106} INFO -             SELECT * FROM calidad_etl.sm_cerrado
+[2025-02-11T06:32:17.733-0500] {subprocess.py:106} INFO -                 WHERE "INSERTAR_DT" >= %s;
+[2025-02-11T06:32:17.734-0500] {subprocess.py:106} INFO -             '
+[2025-02-11T06:32:18.027-0500] {subprocess.py:106} INFO - 2025-02-11 06:32:18,027 - assets - INFO - SQL query succesfully executed
+[2025-02-11T06:32:18.028-0500] {subprocess.py:106} INFO - 2025-02-11 06:32:18,027 - etl_ex_bbva - INFO - Start ETL Exito Tuya BBVA
+[2025-02-11T06:32:22.950-0500] {subprocess.py:106} INFO - 2025-02-11 06:32:22,950 - etl_ex_bbva - INFO - Reporte como_vamos.xlsx successfully load
+[2025-02-11T06:32:23.172-0500] {subprocess.py:106} INFO - 2025-02-11 06:32:23,172 - etl_ex_bbva - INFO - etl_ex_bbva.py success execution
+[2025-02-11T06:32:23.173-0500] {subprocess.py:106} INFO - Conexión exitosa a la base de datos: calidad_etl
+[2025-02-11T06:32:23.427-0500] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-11T06:32:23.467-0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-11T06:32:23.468-0500] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=etl_ex_bbva, run_id=scheduled__2025-02-10T11:30:00+00:00, execution_date=20250210T113000, start_date=20250211T113213, end_date=20250211T113223
+[2025-02-11T06:32:23.492-0500] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-11T06:32:23.520-0500] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-11T06:32:23.525-0500] {local_task_job_runner.py:245} INFO - ::endgroup::

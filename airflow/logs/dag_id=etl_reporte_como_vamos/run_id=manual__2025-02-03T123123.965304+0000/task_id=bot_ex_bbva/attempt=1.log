@@ -1,0 +1,31 @@
+[2025-02-03T07:33:07.228-0500] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-03T07:33:07.250-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-03T12:31:23.965304+00:00 [queued]>
+[2025-02-03T07:33:07.261-0500] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-03T12:31:23.965304+00:00 [queued]>
+[2025-02-03T07:33:07.263-0500] {taskinstance.py:2866} INFO - Starting attempt 1 of 4
+[2025-02-03T07:33:07.282-0500] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): bot_ex_bbva> on 2025-02-03 12:31:23.965304+00:00
+[2025-02-03T07:33:07.292-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=8349) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-03T07:33:07.293-0500] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_reporte_como_vamos', 'bot_ex_bbva', 'manual__2025-02-03T12:31:23.965304+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/etl_como_vamos_dag.py', '--cfg-path', '/tmp/tmpi52ykg02']
+[2025-02-03T07:33:07.295-0500] {standard_task_runner.py:72} INFO - Started process 8350 to run task
+[2025-02-03T07:33:07.296-0500] {standard_task_runner.py:105} INFO - Job 29: Subtask bot_ex_bbva
+[2025-02-03T07:33:07.350-0500] {task_command.py:467} INFO - Running <TaskInstance: etl_reporte_como_vamos.bot_ex_bbva manual__2025-02-03T12:31:23.965304+00:00 [running]> on host 21f1c1b48730
+[2025-02-03T07:33:07.459-0500] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_reporte_como_vamos' AIRFLOW_CTX_TASK_ID='bot_ex_bbva' AIRFLOW_CTX_EXECUTION_DATE='2025-02-03T12:31:23.965304+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-03T12:31:23.965304+00:00'
+[2025-02-03T07:33:07.461-0500] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-03T07:33:07.480-0500] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-03T07:33:07.481-0500] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/bot_etl_ex_bbva.py']
+[2025-02-03T07:33:07.493-0500] {subprocess.py:99} INFO - Output:
+[2025-02-03T07:33:08.576-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:08,576 - bot_etl_ex_bbva - INFO - Bot ETL Exito-BBVA started
+[2025-02-03T07:33:09.194-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:09,193 - bot_etl_ex_bbva - INFO - Conexión al Selenium Hub establecida correctamente
+[2025-02-03T07:33:10.115-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:10,115 - bot_etl_ex_bbva - INFO - Credentials input success
+[2025-02-03T07:33:11.188-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:11,188 - bot_etl_ex_bbva - INFO - Click in login button
+[2025-02-03T07:33:21.213-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:21,213 - bot_etl_ex_bbva - INFO - Loging success
+[2025-02-03T07:33:22.580-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:22,580 - bot_etl_ex_bbva - INFO - Input file succes
+[2025-02-03T07:33:31.662-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:31,658 - bot_etl_ex_bbva - INFO - Click in Cargar
+[2025-02-03T07:33:37.367-0500] {subprocess.py:106} INFO - 2025-02-03 07:33:37,366 - bot_etl_ex_bbva - INFO - bot_etl_ex_bbva finish execution
+[2025-02-03T07:33:37.657-0500] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-03T07:33:37.745-0500] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-03T07:33:37.748-0500] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_reporte_como_vamos, task_id=bot_ex_bbva, run_id=manual__2025-02-03T12:31:23.965304+00:00, execution_date=20250203T123123, start_date=20250203T123307, end_date=20250203T123337
+[2025-02-03T07:33:37.827-0500] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-03T07:33:37.869-0500] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-03T07:33:37.873-0500] {local_task_job_runner.py:245} INFO - ::endgroup::
